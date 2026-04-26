@@ -49,11 +49,11 @@ CSS INDEX
 :root {
   --black: #000;
   --white: #fff;
-  --ul-primary: #EB5310;
-  --ul-secondary: #FAA019;
-  --ul-c3: #FFE9C8;
-  --ul-c4: #FFF9F4;
-  --ul-c5: #FC791A;
+  --ul-primary: #f0182d;
+  --ul-secondary: #ff5a64;
+  --ul-c3: #ffe0e4;
+  --ul-c4: #fff6f7;
+  --ul-c5: #ff4f5f;
   --ul-black: #1E252F;
   --ul-p: #434343;
   --ul-gray: #434343;
@@ -73,7 +73,7 @@ body {
   font-family: var(--font-primary);
   margin: auto;
   font-size: clamp(13px, 0.84vw, 16px);
-  position: fixed;
+  position: relative;
 }
 
 a,
@@ -217,7 +217,63 @@ button {
   }
 }
 .logo {
-  max-width: clamp(130px, 11.56vw, 220px);
+  width: clamp(52px, 4.2vw, 72px);
+  max-width: none;
+  height: auto;
+  display: block;
+}
+.velikan-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(8px, 0.74vw, 14px);
+  color: var(--ul-black);
+  text-decoration: none;
+}
+.velikan-brand:hover {
+  color: var(--ul-black);
+}
+.velikan-brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  white-space: nowrap;
+}
+.velikan-brand-name {
+  color: #e6001e;
+  font-family: var(--font-quicksand);
+  font-size: clamp(22px, 1.58vw, 30px);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+.velikan-brand-subtitle {
+  margin-top: 5px;
+  color: #1e252f;
+  font-size: clamp(10px, 0.68vw, 13px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.ul-header:not(.ul-header-2) .velikan-brand-subtitle {
+  color: rgba(255, 255, 255, 0.82);
+}
+.ul-header-bottom.sticky .velikan-brand-subtitle {
+  color: #1e252f;
+}
+.ul-sidebar-header .velikan-brand .logo {
+  width: clamp(48px, 12vw, 62px);
+}
+.ul-footer .velikan-brand-name {
+  color: var(--white);
+}
+.ul-footer .velikan-brand-subtitle {
+  color: rgba(255, 255, 255, 0.72);
+}
+@media screen and (max-width: 575px) {
+  .velikan-brand-name {
+    font-size: 20px;
+  }
+  .velikan-brand-subtitle {
+    font-size: 10px;
+  }
 }
 
 .ul-bs-row {
@@ -457,6 +513,27 @@ button {
   background-color: rgba(30, 37, 47, 0.9);
   z-index: -1;
   pointer-events: none;
+}
+.ul-contact-breadcrumb {
+  background-image: url(../img/velikan-contact-header-bg.png);
+  background-position: center center;
+}
+.ul-contact-breadcrumb::before {
+  background-color: rgba(30, 37, 47, 0.68);
+}
+.ul-events-breadcrumb {
+  background-image: url(../img/velikan-cta-help-bg-v3.png);
+  background-position: center center;
+}
+.ul-events-breadcrumb::before {
+  background-color: rgba(30, 37, 47, 0.7);
+}
+.ul-news-breadcrumb {
+  background-image: url(../img/velikan-contact-header-bg.png);
+  background-position: center center;
+}
+.ul-news-breadcrumb::before {
+  background-color: rgba(30, 37, 47, 0.72);
 }
 .ul-breadcrumb-title {
   font-weight: 900;
@@ -1011,11 +1088,8 @@ button {
 .ul-header-bottom.sticky .ul-header-actions button {
   color: var(--ul-black);
 }
-.ul-header-bottom.sticky .logo-container::before {
-  background-color: #f5f5f5;
-}
 .ul-header-bottom-wrapper {
-  gap: clamp(22px, 4.2vw, 80px);
+  gap: clamp(16px, 2vw, 38px);
   position: relative;
   z-index: 1;
 }
@@ -1032,27 +1106,9 @@ button {
   position: relative;
   z-index: 1;
 }
-.ul-header .logo-container::before, .ul-header .logo-container::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: calc(0% - clamp(28px, 1.58vw, 30px));
-  bottom: calc(0% - clamp(45px, 3.42vw, 65px));
-  right: calc(0% - clamp(20px, 1.58vw, 30px));
-  left: calc(0% - clamp(28px, 2.1vw, 40px));
-  background-color: var(--white);
-  clip-path: polygon(23.853% -62.128%, 23.853% -62.128%, 25.154% -69.256%, 26.501% -75.412%, 27.924% -80.649%, 29.451% -85.021%, 31.112% -88.582%, 32.938% -91.387%, 34.957% -93.49%, 37.2% -94.944%, 39.695% -95.803%, 42.473% -96.123%, 42.473% -96.123%, 48.384% -94.64%, 53.914% -90.241%, 59.087% -83.422%, 63.931% -74.678%, 68.469% -64.506%, 72.727% -53.401%, 76.73% -41.858%, 80.503% -30.374%, 84.072% -19.444%, 87.461% -9.564%, 87.461% -9.564%, 90.012% -2.284%, 92.484% 5.333%, 94.768% 13.245%, 96.758% 21.413%, 98.347% 29.793%, 99.426% 38.347%, 99.89% 47.032%, 99.63% 55.808%, 98.54% 64.634%, 96.512% 73.468%, 96.512% 73.468%, 93.216% 82.481%, 89.152% 89.645%, 84.505% 94.939%, 79.462% 98.346%, 74.209% 99.844%, 68.932% 99.416%, 63.818% 97.041%, 59.053% 92.702%, 54.822% 86.377%, 51.313% 78.049%, 51.313% 78.049%, 49.202% 71.93%, 47.238% 66.923%, 45.338% 62.965%, 43.42% 59.992%, 41.399% 57.941%, 39.193% 56.746%, 36.719% 56.345%, 33.894% 56.673%, 30.635% 57.667%, 26.858% 59.263%, 26.858% 59.263%, 22.58% 60.972%, 18.758% 61.918%, 15.363% 62.078%, 12.367% 61.431%, 9.743% 59.955%, 7.462% 57.628%, 5.496% 54.429%, 3.817% 50.336%, 2.397% 45.326%, 1.208% 39.379%, 1.208% 39.379%, 0.528% 34.322%, 0.184% 29.309%, 0.154% 24.364%, 0.416% 19.508%, 0.948% 14.764%, 1.728% 10.154%, 2.734% 5.7%, 3.943% 1.424%, 5.335% -2.651%, 6.885% -6.504%, 6.885% -6.504%, 10.221% -14.198%, 12.928% -20.553%, 15.107% -25.893%, 16.855% -30.543%, 18.272% -34.828%, 19.456% -39.071%, 20.508% -43.599%, 21.525% -48.734%, 22.607% -54.802%, 23.853% -62.128%);
-}
-.ul-header .logo-container::after {
-  background-color: rgba(255, 255, 255, 0.2);
-  bottom: calc(0% - clamp(26px, 2.73vw, 52px));
-  left: calc(0% - clamp(20px, 1.58vw, 30px));
-  right: calc(0% - clamp(28px, 2.1vw, 40px));
-  clip-path: polygon(12.845% -48.266%, 12.845% -48.266%, 13.243% -56.845%, 13.802% -64.394%, 14.544% -70.99%, 15.49% -76.71%, 16.662% -81.632%, 18.083% -85.833%, 19.775% -89.391%, 21.759% -92.383%, 24.057% -94.886%, 26.692% -96.979%, 26.692% -96.979%, 32.558% -99.078%, 38.406% -97.762%, 44.202% -93.587%, 49.91% -87.11%, 55.495% -78.884%, 60.922% -69.467%, 66.157% -59.414%, 71.163% -49.28%, 75.906% -39.62%, 80.351% -30.991%, 80.351% -30.991%, 83.678% -24.667%, 86.968% -17.926%, 90.114% -10.745%, 93.007% -3.103%, 95.539% 5.025%, 97.603% 13.66%, 99.089% 22.826%, 99.89% 32.545%, 99.898% 42.84%, 99.004% 53.733%, 99.004% 53.733%, 96.912% 65.618%, 93.859% 75.971%, 90.021% 84.656%, 85.575% 91.533%, 80.7% 96.465%, 75.571% 99.313%, 70.365% 99.94%, 65.259% 98.209%, 60.431% 93.98%, 56.057% 87.116%, 56.057% 87.116%, 53.293% 81.779%, 50.803% 77.562%, 48.501% 74.446%, 46.298% 72.414%, 44.108% 71.449%, 41.842% 71.534%, 39.414% 72.651%, 36.734% 74.784%, 33.717% 77.914%, 30.273% 82.025%, 30.273% 82.025%, 26.361% 86.573%, 22.796% 90.004%, 19.548% 92.311%, 16.588% 93.488%, 13.886% 93.529%, 11.412% 92.429%, 9.137% 90.181%, 7.032% 86.778%, 5.065% 82.216%, 3.209% 76.487%, 3.209% 76.487%, 1.949% 71.407%, 1.017% 66.166%, 0.396% 60.8%, 0.067% 55.348%, 0.011% 49.848%, 0.209% 44.338%, 0.644% 38.856%, 1.296% 33.441%, 2.147% 28.129%, 3.178% 22.96%, 3.178% 22.96%, 5.466% 12.487%, 7.31% 3.866%, 8.767% -3.317%, 9.892% -9.478%, 10.743% -15.033%, 11.375% -20.398%, 11.844% -25.988%, 12.208% -32.219%, 12.523% -39.507%, 12.845% -48.266%);
-}
 .ul-header-nav {
   display: flex;
-  gap: clamp(30px, 2.36vw, 45px);
+  gap: clamp(14px, 1.15vw, 22px);
 }
 @media screen and (max-width: 991px) {
   .ul-header-nav {
@@ -1077,6 +1133,7 @@ button {
 }
 .ul-header-nav a {
   font-weight: 600;
+  font-size: clamp(13px, 0.78vw, 15px);
 }
 .ul-header-nav a, .ul-header-nav a:not([href]):not([class]) {
   color: var(--white);
@@ -1180,7 +1237,7 @@ button {
   padding: 12px 15px;
   display: inline-block;
   width: 100%;
-  text-transform: capitalize;
+  text-transform: none;
   color: var(--ul-black);
 }
 @media screen and (max-width: 991px) {
@@ -1415,9 +1472,6 @@ button {
   position: fixed;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-.ul-header-2 .logo-container::before, .ul-header-2 .logo-container::after {
-  display: none;
-}
 .ul-header-2 .ul-header-actions button {
   color: var(--ul-black);
 }
@@ -1545,7 +1599,7 @@ button {
   }
 }
 .ul-banner-img .img-wrapper {
-  background: linear-gradient(180deg, var(--ul-primary) 0%, rgba(235, 83, 16, 0) 51%, var(--ul-primary) 100%);
+  background: linear-gradient(180deg, var(--ul-primary) 0%, rgba(240, 24, 45, 0) 51%, var(--ul-primary) 100%);
   padding-left: 10px;
   clip-path: polygon(20.444% 6.836%, 20.444% 6.836%, 21.079% 1.445%, 21.969% -3.298%, 23.149% -7.442%, 24.655% -11.037%, 26.521% -14.129%, 28.783% -16.769%, 31.475% -19.005%, 34.633% -20.885%, 38.291% -22.458%, 42.485% -23.773%, 42.485% -23.773%, 51.821% -25.092%, 61.13% -24.265%, 70.354% -21.642%, 79.44% -17.571%, 88.329% -12.403%, 96.968% -6.486%, 105.299% -0.169%, 113.267% 6.199%, 120.817% 12.269%, 127.892% 17.691%, 127.892% 17.691%, 133.187% 21.665%, 138.424% 25.901%, 143.431% 30.413%, 148.036% 35.215%, 152.067% 40.322%, 155.351% 45.748%, 157.717% 51.507%, 158.992% 57.614%, 159.004% 64.083%, 157.581% 70.928%, 157.581% 70.928%, 154.251% 78.396%, 149.391% 84.901%, 143.283% 90.358%, 136.208% 94.679%, 128.447% 97.778%, 120.283% 99.568%, 111.997% 99.963%, 103.871% 98.874%, 96.186% 96.217%, 89.224% 91.904%, 89.224% 91.904%, 84.824% 88.551%, 80.861% 85.901%, 77.197% 83.943%, 73.692% 82.666%, 70.205% 82.06%, 66.599% 82.113%, 62.733% 82.815%, 58.469% 84.155%, 53.665% 86.122%, 48.184% 88.705%, 48.184% 88.705%, 41.958% 91.563%, 36.284% 93.719%, 31.115% 95.169%, 26.403% 95.908%, 22.102% 95.934%, 18.165% 95.243%, 14.544% 93.83%, 11.192% 91.692%, 8.062% 88.825%, 5.108% 85.226%, 5.108% 85.226%, 3.102% 82.034%, 1.619% 78.74%, 0.63% 75.368%, 0.106% 71.943%, 0.017% 68.487%, 0.333% 65.024%, 1.025% 61.58%, 2.062% 58.177%, 3.417% 54.84%, 5.058% 51.592%, 5.058% 51.592%, 8.7% 45.01%, 11.636% 39.594%, 13.954% 35.08%, 15.745% 31.209%, 17.099% 27.718%, 18.105% 24.347%, 18.852% 20.834%, 19.431% 16.919%, 19.932% 12.34%, 20.444% 6.836%);
 }
@@ -1660,7 +1714,7 @@ button {
 }
 .ul-banner-2-thumb-slider {
   margin: 0 10px;
-  width: 140px;
+  width: clamp(150px, 10.5vw, 200px);
 }
 .ul-banner-2-thumb-slider img {
   width: clamp(35px, 2.1vw, 40px);
@@ -1678,7 +1732,7 @@ button {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(101.64deg, rgba(235, 83, 16, 0.9) 1.87%, rgba(235, 83, 16, 0.1) 98.72%);
+  background: linear-gradient(101.64deg, rgba(240, 24, 45, 0.88) 1.87%, rgba(240, 24, 45, 0.12) 98.72%);
   pointer-events: none;
 }
 .ul-banner-2-slide-bg-img {
@@ -1844,10 +1898,57 @@ button {
     display: none;
   }
 }
+.velikan-about-page-img .img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 48% 52% 42% 58% / 44% 45% 55% 56%;
+  background-color: var(--ul-c4);
+  box-shadow: 0 24px 70px rgba(30, 37, 47, 0.12);
+}
+.velikan-about-page-img .img-wrapper img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.velikan-about-page-badge {
+  position: absolute;
+  z-index: 2;
+  top: clamp(18px, 2.1vw, 40px);
+  right: clamp(12px, 2.1vw, 40px);
+  min-width: clamp(145px, 10.5vw, 200px);
+  padding: clamp(14px, 1.05vw, 20px) clamp(18px, 1.58vw, 30px);
+  border-radius: 999px;
+  background-color: var(--ul-primary);
+  color: var(--white);
+  text-align: center;
+  box-shadow: 0 16px 34px rgba(240, 24, 45, 0.24);
+}
+.velikan-about-page-badge .number {
+  display: block;
+  font-size: clamp(34px, 2.63vw, 50px);
+  line-height: 1;
+  font-weight: 800;
+}
+.velikan-about-page-badge .txt {
+  display: block;
+  margin-top: 4px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+.velikan-about-page .ul-about-block .block-right img {
+  object-fit: cover;
+}
+.velikan-about-page .ul-about-bottom {
+  margin-top: clamp(20px, 1.58vw, 30px);
+}
 .ul-about-2 {
   overflow: hidden;
 }
 .ul-about-2-img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
   border-radius: 999px;
   border-bottom-left-radius: 0px;
 }
@@ -1871,8 +1972,26 @@ button {
   display: block;
   margin-bottom: clamp(10px, 0.79vw, 15px);
 }
+.velikan-home-about .ul-about-2-stat {
+  top: clamp(14px, 1.63vw, 31px);
+  right: clamp(24px, 3.36vw, 64px);
+  bottom: auto;
+  min-width: clamp(150px, 10.5vw, 200px);
+  border-radius: 999px;
+  padding: clamp(14px, 1.21vw, 23px) clamp(20px, 1.79vw, 34px);
+  box-shadow: 0 18px 42px rgba(240, 24, 45, 0.28);
+}
+.velikan-home-about .ul-about-2-stat .number {
+  font-size: clamp(34px, 2.52vw, 48px);
+}
+.velikan-home-about .ul-about-block {
+  margin-bottom: clamp(20px, 2vw, 38px);
+}
+.velikan-home-about .ul-about-block .block-right img {
+  object-fit: cover;
+}
 .ul-about-2-bottom {
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin-bottom: clamp(20px, 2.63vw, 50px);
 }
 .ul-about-2-bottom-block {
@@ -2067,7 +2186,7 @@ button {
   background-color: var(--ul-primary);
   border-radius: 20px;
   padding: clamp(30px, 3.15vw, 60px) 0;
-  box-shadow: 0px 4px 70px rgba(235, 83, 16, 0.2);
+  box-shadow: 0px 4px 70px rgba(240, 24, 45, 0.18);
   overflow: hidden;
 }
 @media screen and (max-width: 991px) {
@@ -2081,7 +2200,7 @@ button {
   border-radius: 20px;
   mix-blend-mode: multiply;
   inset: 0;
-  filter: drop-shadow(0px 4px 70px rgba(235, 83, 16, 0.2));
+  filter: drop-shadow(0px 4px 70px rgba(240, 24, 45, 0.18));
   background: url(../img/donate-form-wrapper-bg.png) no-repeat center center/cover;
   pointer-events: none;
   z-index: -1;
@@ -2126,7 +2245,7 @@ button {
   position: relative;
   z-index: 1;
   padding: clamp(20px, 3.15vw, 60px);
-  box-shadow: 0px 4px 70px rgba(235, 83, 16, 0.2);
+  box-shadow: 0px 4px 70px rgba(240, 24, 45, 0.18);
 }
 @media screen and (max-width: 991px) {
   .ul-donate-form-wrapper {
@@ -2420,6 +2539,151 @@ button {
   border-radius: 20px;
 }
 
+.velikan-events-intro {
+  max-width: 880px;
+  margin: 0 auto clamp(28px, 3.15vw, 60px);
+  text-align: center;
+}
+.velikan-events-intro .ul-section-descr {
+  margin-top: clamp(10px, 0.95vw, 18px);
+}
+.velikan-events-page .row > .col {
+  display: flex;
+}
+.velikan-events-page .ul-event {
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+}
+.velikan-events-page .ul-event-img {
+  aspect-ratio: 1/1;
+  width: clamp(192px, 14.29vw, 272px);
+  max-width: clamp(192px, 14.29vw, 272px);
+  background-color: var(--ul-gray3);
+}
+.velikan-events-page .ul-event-img img {
+  object-fit: cover;
+  object-position: center center;
+}
+.velikan-events-page .ul-event-img > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.velikan-events-page .ul-event-img > a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.velikan-events-page .ul-event-img .date {
+  top: auto;
+  left: auto;
+  right: clamp(10px, 1.05vw, 20px);
+  bottom: clamp(10px, 1.05vw, 20px);
+  color: var(--white);
+  background-color: var(--ul-primary);
+}
+.velikan-events-page .ul-event-title {
+  line-height: 1.25;
+}
+.velikan-events-page .ul-event-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.velikan-events-page .ul-event-info {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: clamp(14px, 1.05vw, 20px);
+}
+@media screen and (max-width: 767px) {
+  .velikan-events-page .ul-event {
+    flex-direction: column;
+  }
+  .velikan-events-page .ul-event-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.velikan-event-detail-page .ul-inner-sidebar-widget-content .ul-btn {
+  margin-top: clamp(12px, 1.05vw, 20px);
+}
+.velikan-event-detail-hero {
+  aspect-ratio: 16/7;
+}
+.velikan-event-detail-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.velikan-event-detail-grid {
+  display: grid;
+  gap: clamp(14px, 1.05vw, 20px);
+  margin-top: clamp(14px, 1.05vw, 20px);
+}
+.velikan-event-detail-card {
+  scroll-margin-top: 120px;
+  display: grid;
+  grid-template-columns: clamp(130px, 11.56vw, 220px) 1fr;
+  gap: clamp(14px, 1.26vw, 24px);
+  align-items: center;
+  padding: clamp(14px, 1.05vw, 20px);
+  border: 1px solid rgba(30, 37, 47, 0.1);
+  border-radius: 20px;
+  background-color: var(--ul-gray3);
+}
+.velikan-event-detail-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.velikan-event-detail-card h4 {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: clamp(20px, 1.26vw, 24px);
+  margin-bottom: 8px;
+}
+.velikan-event-detail-card p {
+  margin-bottom: 10px;
+}
+.velikan-event-detail-card a {
+  font-weight: 700;
+  color: var(--ul-primary);
+}
+.velikan-event-detail-meta {
+  display: inline-flex;
+  margin-bottom: 6px;
+  color: var(--ul-primary);
+  font-weight: 800;
+}
+.velikan-event-detail-note {
+  margin-top: clamp(24px, 2.1vw, 40px);
+  padding: clamp(20px, 2.1vw, 40px);
+  border-radius: 24px;
+  background-color: var(--ul-black);
+  color: var(--white);
+}
+.velikan-event-detail-note h3 {
+  margin-top: 0;
+  color: var(--white);
+}
+.velikan-event-detail-note p {
+  color: rgba(255, 255, 255, 0.82);
+}
+.velikan-event-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: clamp(14px, 1.05vw, 20px);
+}
+@media screen and (max-width: 575px) {
+  .velikan-event-detail-card {
+    grid-template-columns: 1fr;
+  }
+}
+
 .ul-why-join-wrapper {
   background-color: var(--ul-gray3);
   border-radius: clamp(15px, 1.58vw, 30px);
@@ -2489,6 +2753,14 @@ button {
   --bs-gutter-x: clamp(20px, 3.15vw, 60px);
   --bs-gutter-y: clamp(20px, 3.15vw, 60px);
 }
+.ul-team-intro {
+  max-width: 760px;
+  margin: 0 auto clamp(30px, 3.15vw, 60px);
+  text-align: center;
+}
+.ul-team-intro .ul-section-descr {
+  margin-bottom: clamp(24px, 2.1vw, 40px);
+}
 .ul-team-row .col:nth-child(odd) .ul-team-member {
   margin-top: clamp(34px, 2.84vw, 54px);
 }
@@ -2503,6 +2775,9 @@ button {
   border-radius: clamp(15px, 1.05vw, 20px);
   text-align: center;
   transition: 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .ul-team-member:hover {
   background-color: var(--ul-primary);
@@ -2526,6 +2801,14 @@ button {
 .ul-team-member-img img {
   width: 100%;
   aspect-ratio: 308/320;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+.velikan-spec-logo-card .ul-team-member-img img {
+  background-color: var(--white);
+  object-fit: contain;
+  padding: clamp(18px, 2.1vw, 40px);
 }
 .ul-team-member-img::before {
   content: "";
@@ -2564,16 +2847,23 @@ button {
 }
 .ul-team-member-info {
   padding: clamp(16px, 1.16vw, 22px) 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: clamp(10px, 0.95vw, 18px);
 }
 .ul-team-member-name {
   margin-bottom: 0;
-  font-size: clamp(20px, 1.26vw, 24px);
+  font-size: clamp(18px, 1.16vw, 22px);
   font-weight: 600;
   font-family: var(--font-quicksand);
+  line-height: 1.25;
 }
 .ul-team-member-designation {
   margin-bottom: 0;
   color: var(--ul-p);
+  line-height: 1.45;
 }
 
 .ul-inner-team .ul-team-row {
@@ -2678,7 +2968,7 @@ button {
   align-items: center;
   gap: clamp(4px, 0.37vw, 7px);
   font-size: var(--ul-primary);
-  color: #FFA31A;
+  color: var(--ul-secondary);
   margin-bottom: clamp(10px, 1.05vw, 20px);
 }
 .ul-review-descr {
@@ -2740,7 +3030,7 @@ button {
 }
 .ul-testimonial-2-overview-stars {
   font-size: clamp(20px, 1.31vw, 25px);
-  color: #FFA31A;
+  color: var(--ul-secondary);
   margin-bottom: clamp(1px, 0.21vw, 4px);
 }
 .ul-testimonial-2-overview-title {
@@ -2905,7 +3195,7 @@ button {
   border-color: transparent;
 }
 .ul-blog:hover .ul-blog-txt {
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
 }
 .ul-blog-img {
   position: relative;
@@ -2915,6 +3205,8 @@ button {
 .ul-blog-img img {
   width: 100%;
   aspect-ratio: 370/265;
+  display: block;
+  object-fit: cover;
 }
 .ul-blog .date {
   position: absolute;
@@ -3020,6 +3312,12 @@ button {
 .ul-blog-2 {
   background-color: var(--ul-gray3);
   border: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ul-blog-2 .ul-blog-img {
+  flex-shrink: 0;
 }
 .ul-blog-2 .ul-blog-img .date {
   inset: auto;
@@ -3029,6 +3327,9 @@ button {
 .ul-blog-2 .ul-blog-txt {
   box-shadow: none !important;
   padding-top: clamp(18px, 1.47vw, 28px);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .ul-blog-2 .ul-blog-infos {
   border: none;
@@ -3041,8 +3342,14 @@ button {
   width: auto;
   flex-grow: 0;
 }
+.ul-blog-2 .ul-blog-title {
+  display: block;
+  min-height: 3.6em;
+  padding-top: 0;
+}
 .ul-blog-2 .ul-blog-btn {
   color: var(--ul-black);
+  margin-top: auto;
 }
 .ul-blog-2 .ul-blog-btn i {
   color: var(--ul-primary);
@@ -3050,7 +3357,75 @@ button {
 .ul-blog-2 .ul-blog-btn:hover {
   color: var(--ul-primary);
 }
+@media screen and (max-width: 767px) {
+  .ul-blog-2 .ul-blog-title {
+    min-height: 0;
+  }
+}
 
+.velikan-news-page .ul-blog-img > a {
+  display: block;
+}
+.velikan-news-page .ul-blog-img > a img {
+  display: block;
+}
+.velikan-news-card-text {
+  color: var(--ul-p);
+  font-size: clamp(13px, 0.84vw, 16px);
+  line-height: 1.6;
+  margin: 0 0 clamp(14px, 1.05vw, 20px);
+}
+.velikan-news-page .ul-blog-title {
+  min-height: 3.6em;
+}
+.velikan-news-detail-article {
+  scroll-margin-top: 120px;
+  padding-bottom: clamp(28px, 3.15vw, 60px);
+  border-bottom: 1px solid rgba(30, 37, 47, 0.12);
+}
+.velikan-news-detail-article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.velikan-news-detail-article .ul-btn {
+  margin-top: clamp(10px, 1.05vw, 20px);
+}
+.velikan-news-detail-aside .ul-inner-sidebar-post .title a {
+  font-size: clamp(14px, 0.89vw, 17px);
+}
+.velikan-single-news .ul-blog-title {
+  font-size: clamp(28px, 2.63vw, 50px);
+  margin-bottom: clamp(14px, 1.05vw, 20px);
+}
+.velikan-single-news .ul-blog-img {
+  background-color: var(--ul-gray3);
+}
+.velikan-single-news .ul-blog-img img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.velikan-single-news h3 {
+  font-family: var(--font-quicksand);
+  font-size: clamp(24px, 1.68vw, 32px);
+  font-weight: 700;
+  margin: clamp(24px, 2.1vw, 40px) 0 clamp(10px, 1.05vw, 20px);
+}
+.velikan-single-news blockquote {
+  position: relative;
+  margin: clamp(18px, 1.84vw, 35px) 0;
+  padding: clamp(20px, 2.1vw, 40px);
+  border-radius: 20px;
+  background-color: var(--ul-primary);
+  color: var(--white);
+  font-size: clamp(18px, 1.26vw, 24px);
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  line-height: 1.45;
+}
 .ul-blog-inner {
   background-color: transparent;
   border-radius: 0;
@@ -3061,9 +3436,9 @@ button {
   margin-bottom: clamp(15px, 1.58vw, 30px);
 }
 .ul-blog-inner .ul-blog-img img {
-  aspect-ratio: 890/600;
-  width: 100%;
-  object-fit: cover;
+  /* aspect-ratio: 890/600; */
+  /* width: 100%; */
+  /* object-fit: cover; */
 }
 .ul-blog-inner .ul-blog-title {
   font-size: clamp(22px, 2.63vw, 50px);
@@ -3121,7 +3496,7 @@ button {
 }
 
 .ul-cta {
-  background: url(../img/cta-bg.jpg) no-repeat center center/cover;
+  background: url(../img/velikan-cta-help-bg-v3.png) no-repeat center center/cover;
   position: relative;
   z-index: 1;
   text-align: center;
@@ -3131,7 +3506,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(30, 37, 47, 0.6);
+  background: rgba(30, 37, 47, 0.68);
   z-index: -2;
 }
 .ul-cta::before {
@@ -3149,7 +3524,14 @@ button {
   color: var(--white);
   font-weight: 700;
   font-family: var(--font-quicksand);
-  margin-bottom: clamp(16px, 1.73vw, 33px);
+  margin-bottom: clamp(12px, 1.05vw, 20px);
+}
+.ul-cta-descr {
+  max-width: 760px;
+  margin: 0 auto clamp(18px, 1.73vw, 33px);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(16px, 1.05vw, 20px);
+  line-height: 1.6;
 }
 @media screen and (max-width: 767px) {
   .ul-cta-title {
@@ -3183,42 +3565,46 @@ button {
   background: linear-gradient(0deg, var(--ul-black) 50%, rgba(0, 0, 0, 0) 0);
 }
 .ul-footer-top-contact-infos {
-  background-color: var(--ul-primary);
-  padding: clamp(20px, 1.84vw, 35px) clamp(25px, 2.63vw, 50px);
-  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 34%),
+    linear-gradient(135deg, #f0182d 0%, #ff4356 55%, #ff6b78 100%);
+  padding: clamp(18px, 1.84vw, 35px) clamp(20px, 2.63vw, 42px);
+  border-radius: clamp(20px, 1.58vw, 30px);
   overflow: hidden;
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: clamp(14px, 1.05vw, 20px);
+  box-shadow: 0 24px 60px rgba(240, 24, 45, 0.26);
 }
 .ul-footer-top-contact-infos,
 .ul-footer-top-contact-infos a {
   color: var(--white);
 }
 .ul-footer-top-contact-infos a:hover {
-  color: var(--ul-black);
+  color: var(--white);
+  opacity: 0.82;
 }
 @media screen and (max-width: 991px) {
   .ul-footer-top-contact-infos {
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: stretch;
   }
 }
 @media screen and (max-width: 767px) {
   .ul-footer-top-contact-infos {
-    justify-content: flex-start;
+    padding: 18px;
   }
 }
 .ul-footer-top-contact-info {
   display: flex;
   align-items: center;
-  gap: clamp(10px, 0.79vw, 15px);
+  gap: clamp(12px, 0.95vw, 18px);
 }
 .ul-footer-top-contact-info-icon {
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 50%;
   width: clamp(48px, 3.31vw, 63px);
   aspect-ratio: 1/1;
@@ -3226,9 +3612,11 @@ button {
   align-items: center;
   justify-content: center;
   color: var(--ul-primary);
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 .ul-footer-top-contact-info-icon-inner {
-  width: clamp(35px, 2.1vw, 40px);
+  width: clamp(36px, 2.31vw, 44px);
   aspect-ratio: 1/1;
   background-color: var(--white);
   border-radius: 50%;
@@ -3239,15 +3627,29 @@ button {
 .ul-footer-top-contact-info-txt {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 .ul-footer-top-contact-info-label {
-  font-size: clamp(12px, 0.74vw, 14px);
-  font-weight: 500;
-  margin-bottom: clamp(3px, 0.32vw, 6px);
+  font-size: clamp(11px, 0.68vw, 13px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 0;
 }
 .ul-footer-top-contact-info-address {
-  font-size: clamp(17px, 1.05vw, 20px);
+  font-size: clamp(15px, 0.94vw, 18px);
   font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+.ul-footer-top-contact-info-address a {
+  text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  .ul-footer-top-contact-info {
+    width: 100%;
+  }
 }
 .ul-footer-middle {
   padding: clamp(50px, 4.2vw, 80px) 0 clamp(50px, 5.25vw, 100px);
@@ -3282,7 +3684,8 @@ button {
   margin-bottom: 0;
 }
 .ul-footer-about .logo {
-  max-width: clamp(130px, 9.46vw, 180px);
+  width: clamp(58px, 4.73vw, 90px);
+  max-width: none;
 }
 .ul-footer-about-txt {
   font-size: clamp(13px, 0.84vw, 16px);
@@ -3309,6 +3712,39 @@ button {
   color: var(--white);
   background-color: var(--ul-primary);
   border-color: var(--ul-primary);
+}
+.ul-footer-socials a[href*="vk.com/"] i,
+.ul-footer-socials a[href*="rutube.ru/"] i,
+.ul-footer-socials a[href*="t.me/"] i,
+.ul-sidebar-footer-social a[href*="vk.com/"] i,
+.ul-sidebar-footer-social a[href*="rutube.ru/"] i,
+.ul-sidebar-footer-social a[href*="t.me/"] i {
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-color: currentColor;
+  -webkit-mask: var(--velikan-social-icon) center / contain no-repeat;
+  mask: var(--velikan-social-icon) center / contain no-repeat;
+}
+.ul-footer-socials a[href*="vk.com/"] i::before,
+.ul-footer-socials a[href*="rutube.ru/"] i::before,
+.ul-footer-socials a[href*="t.me/"] i::before,
+.ul-sidebar-footer-social a[href*="vk.com/"] i::before,
+.ul-sidebar-footer-social a[href*="rutube.ru/"] i::before,
+.ul-sidebar-footer-social a[href*="t.me/"] i::before {
+  content: "";
+}
+.ul-footer-socials a[href*="vk.com/"] i,
+.ul-sidebar-footer-social a[href*="vk.com/"] i {
+  --velikan-social-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2Zm3.1 14.27h-1.45c-.55 0-.72-.44-1.72-1.44-.87-.84-1.25-.95-1.46-.95-.3 0-.39.08-.39.51v1.31c0 .36-.11.57-1.05.57-1.55 0-3.26-.94-4.47-2.68-1.82-2.55-2.31-4.47-2.31-4.86 0-.22.08-.43.51-.43h1.46c.38 0 .52.17.66.57.73 2.11 1.95 3.96 2.45 3.96.19 0 .27-.09.27-.56v-2.18c-.06-1-.59-1.08-.59-1.43 0-.17.15-.36.38-.36h2.29c.31 0 .42.17.42.54v2.94c0 .32.14.43.23.43.19 0 .35-.11.7-.46 1.08-1.21 1.85-3.08 1.85-3.08.1-.22.28-.43.66-.43h1.46c.44 0 .54.22.44.54-.18.83-1.96 3.35-1.96 3.35-.16.26-.22.38 0 .67.16.22.68.66 1.03 1.07.63.72 1.11 1.33 1.24 1.75.14.42-.08.63-.48.63Z'/%3E%3C/svg%3E");
+}
+.ul-footer-socials a[href*="rutube.ru/"] i,
+.ul-sidebar-footer-social a[href*="rutube.ru/"] i {
+  --velikan-social-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' fill-rule='evenodd' d='M4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5h-13C4.67 20 4 19.33 4 18.5v-13ZM10 9v6l6-3-6-3Z'/%3E%3C/svg%3E");
+}
+.ul-footer-socials a[href*="t.me/"] i,
+.ul-sidebar-footer-social a[href*="t.me/"] i {
+  --velikan-social-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M21.5 3.5 2.8 10.7c-1.1.4-1.1 1.1-.2 1.4l4.8 1.5 1.8 5.6c.3.9.9 1.1 1.5.4l2.7-2.6 4.9 3.6c.8.6 1.5.3 1.7-.8l3.1-14.7c.3-1.4-.5-2-1.6-1.6ZM8.2 13.2l9.4-5.9c.5-.3.9-.1.5.2l-7.6 6.9-.3 3.1-2-4.3Z'/%3E%3C/svg%3E");
 }
 .ul-footer-widget {
   min-width: clamp(110px, 10.51vw, 200px);
@@ -3407,15 +3843,24 @@ button {
   color: var(--white);
   font-size: clamp(13px, 0.84vw, 16px);
 }
-.ul-footer-contact-links a {
+.ul-footer-contact-links > * {
   color: var(--white);
   gap: clamp(5px, 0.42vw, 8px);
+  line-height: 1.45;
 }
 .ul-footer-contact-links a:hover {
   color: var(--ul-primary);
 }
-.ul-footer-contact-links a::before {
+.ul-footer-contact-links > *::before {
   content: none;
+}
+.ul-footer-contact-links span:hover {
+  color: var(--white);
+}
+.ul-footer-contact-links i {
+  color: var(--ul-primary);
+  flex-shrink: 0;
+  margin-top: 3px;
 }
 .ul-footer .ul-nwsltr-form {
   margin-top: clamp(15px, 1.58vw, 30px);
@@ -3460,7 +3905,7 @@ button {
 }
 .ul-footer-bottom {
   padding: clamp(14px, 1.16vw, 22px) 0;
-  background-color: var(--ul-primary);
+  background: linear-gradient(90deg, var(--ul-primary) 0%, #d90f26 100%);
 }
 .ul-footer-bottom-wrapper {
   display: flex;
@@ -3473,6 +3918,7 @@ button {
   margin-bottom: 0;
   font-size: clamp(13px, 0.84vw, 16px);
   color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
 }
 .ul-footer-bottom .copyright-txt a {
   color: var(--white);
@@ -3483,13 +3929,28 @@ button {
 .ul-footer-bottom a {
   color: rgba(255, 255, 255, 0.9);
   font-size: clamp(13px, 0.84vw, 16px);
+  font-weight: 600;
 }
 .ul-footer-bottom a:hover {
   color: var(--ul-black);
 }
 .ul-footer-bottom-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: clamp(15px, 1.58vw, 30px);
+}
+.ul-footer-bottom-nav a {
+  position: relative;
+}
+.ul-footer-bottom-nav a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(clamp(15px, 1.58vw, 30px) / -2);
+  width: 1px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-50%);
 }
 .ul-footer-recent-posts {
   max-width: clamp(240px, 15.76vw, 300px);
@@ -3503,13 +3964,89 @@ button {
   left: 0;
 }
 
+.velikan-legal-breadcrumb {
+  background: linear-gradient(90deg, rgba(240, 24, 45, 0.88), rgba(27, 35, 47, 0.72)), url(../img/velikan-home-help-bg.jpg) no-repeat center center/cover;
+}
+.velikan-legal-section {
+  background-color: #f8f8f8;
+}
+.velikan-legal-head {
+  max-width: 920px;
+  margin-bottom: clamp(24px, 2.1vw, 40px);
+}
+.velikan-legal-head .ul-section-title {
+  margin-bottom: clamp(12px, 1.05vw, 20px);
+}
+.velikan-legal-head p {
+  margin-bottom: 0;
+  color: var(--ul-gray);
+  font-size: clamp(16px, 0.95vw, 18px);
+  line-height: 1.75;
+}
+.velikan-legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 1.26vw, 24px);
+}
+.velikan-legal-card,
+.velikan-legal-note {
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 0 12px 38px rgba(21, 29, 42, 0.07);
+}
+.velikan-legal-card {
+  padding: clamp(22px, 1.58vw, 30px);
+}
+.velikan-legal-card h3,
+.velikan-legal-note h3 {
+  margin-bottom: 10px;
+  color: var(--ul-black);
+  font-weight: 800;
+  font-size: clamp(20px, 1.16vw, 22px);
+}
+.velikan-legal-card p,
+.velikan-legal-note p {
+  margin-bottom: 0;
+  color: var(--ul-gray);
+  line-height: 1.7;
+}
+.velikan-legal-note {
+  margin-top: clamp(18px, 1.58vw, 30px);
+  padding: clamp(22px, 1.58vw, 30px);
+  border-left: 5px solid var(--ul-primary);
+}
+.velikan-legal-note a {
+  color: var(--ul-primary);
+  font-weight: 800;
+}
+@media screen and (max-width: 767px) {
+  .velikan-legal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .ul-feature {
   background-color: var(--ul-gray3);
   border-radius: 10px;
   padding: clamp(15px, 1.58vw, 30px);
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+.ul-feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
 }
 .ul-feature-icon {
   margin-bottom: clamp(0px, 0.16vw, 3px);
+}
+.ul-feature-icon i {
+  font-size: clamp(30px, 1.89vw, 36px);
+  color: var(--ul-primary);
+  line-height: 1;
+  display: inline-flex;
 }
 .ul-feature-icon svg {
   width: clamp(30px, 1.89vw, 36px);
@@ -3518,20 +4055,25 @@ button {
   fill: var(--ul-primary);
 }
 .ul-feature-title {
-  font-size: clamp(20px, 1.26vw, 24px);
+  font-size: clamp(18px, 1.16vw, 22px);
   font-weight: 700;
   color: var(--ul-black);
   margin-bottom: 0;
   font-family: var(--font-quicksand);
+  line-height: 1.25;
 }
 
 .ul-volunteer-block {
-  background: url(../img/volunteer-bg-1.jpg) no-repeat center center/cover;
+  background: url(../img/velikan-home-help-bg.jpg) no-repeat center center/cover;
   position: relative;
   z-index: 1;
   padding: clamp(25px, 2.1vw, 40px) clamp(15px, 8.41vw, 160px);
   color: var(--white);
   height: 100%;
+  min-height: clamp(300px, 22vw, 380px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media screen and (max-width: 1199px) {
   .ul-volunteer-block {
@@ -3542,7 +4084,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 87, 40, 0.9);
+  background: linear-gradient(90deg, rgba(240, 24, 45, 0.84) 0%, rgba(240, 24, 45, 0.62) 100%);
   z-index: -1;
 }
 .ul-volunteer-block .ul-btn {
@@ -3592,11 +4134,11 @@ button {
 }
 
 .ul-donate-form-wrapper-2 {
-  background-image: url(../img/donate-form-2-bg.jpg);
+  background: url(../img/velikan-home-support-bg.jpg) no-repeat center center/cover;
 }
 .ul-donate-form-wrapper-2::before {
-  background-color: var(--ul-black);
-  opacity: 80%;
+  background: linear-gradient(90deg, rgba(19, 27, 39, 0.78) 0%, rgba(19, 27, 39, 0.62) 100%);
+  opacity: 1;
 }
 
 .ul-donate-form-2 label {
@@ -3669,6 +4211,8 @@ button {
 }
 .ul-service-img img {
   aspect-ratio: 390/253;
+  width: 100%;
+  object-fit: cover;
 }
 .ul-service-title {
   font-size: clamp(18px, 1.26vw, 24px);
@@ -4754,6 +5298,7 @@ button {
   background-color: var(--ul-gray3);
   border-radius: 20px;
   padding: clamp(20px, 2.1vw, 40px) clamp(15px, 1.84vw, 35px);
+  height: 100%;
 }
 .ul-contact-info .icon {
   background-color: var(--ul-primary);
@@ -4777,10 +5322,24 @@ button {
 .ul-contact-info .descr {
   font-family: var(--font-quicksand);
   font-weight: 700;
-  font-size: clamp(18px, 1.26vw, 24px);
+  font-size: clamp(16px, 1.05vw, 20px);
+  line-height: 1.35;
+  display: block;
+  overflow-wrap: anywhere;
+}
+.ul-contact-info .descr-small {
+  display: block;
+  margin-top: 6px;
+  color: var(--ul-gray);
+  font-size: 14px;
+  line-height: 1.4;
 }
 .ul-contact-info a:hover {
   color: var(--ul-primary);
+}
+.ul-contact-section-descr {
+  max-width: 760px;
+  margin: clamp(8px, 0.84vw, 16px) auto 0;
 }
 .ul-contact-map iframe {
   width: 100%;
@@ -4906,7 +5465,7 @@ button {
   margin-bottom: 0;
 }
 .ul-team-details-experience .ul-progress-container {
-  background-color: rgba(235, 82, 16, 0.5);
+  background-color: rgba(240, 24, 45, 0.45);
   border: none;
 }
 .ul-team-details-experience .ul-progressbar {
@@ -4920,6 +5479,44 @@ button {
   font-weight: 700;
   color: var(--ul-black);
   font-size: clamp(13px, 0.84vw, 16px);
+}
+.velikan-doctor-facts .ul-team-details-info span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.velikan-doctor-actions {
+  flex-wrap: wrap;
+  gap: clamp(10px, 0.84vw, 16px);
+}
+.velikan-doctor-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 1.58vw, 30px);
+  margin-top: clamp(30px, 3.15vw, 60px);
+}
+.velikan-doctor-info-card {
+  height: 100%;
+  border-radius: clamp(15px, 1.05vw, 20px);
+  background-color: var(--ul-gray3);
+  padding: clamp(20px, 1.58vw, 30px);
+}
+.velikan-doctor-info-card .block-list {
+  margin-bottom: 0;
+}
+.velikan-doctor-info-card .block-list li {
+  margin-bottom: clamp(8px, 0.63vw, 12px);
+}
+.velikan-doctor-info-card .block-list li:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .velikan-doctor-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .ul-team-details-img {
+    position: static;
+  }
 }
 
 .ul-pricing-packages {

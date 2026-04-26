@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прием обращений к программе «Итоги года» | ВЕЛИКАН</title>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="../assets/icon/flaticon_charitics.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/splide/splide.min.css">
+    <link rel="stylesheet" href="../assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/vendor/slim-select/slimselect.css">
+    <link rel="stylesheet" href="../assets/vendor/animate-wow/animate.min.css">
+    <link rel="stylesheet" href="../assets/vendor/flatpickr/flatpickr.min.css">
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- SIDEBAR SECTION START -->
+    <div class="ul-sidebar">
+        <div class="ul-sidebar-header">
+            <div class="ul-sidebar-header-logo">
+                <a href="../index.html" class="velikan-brand">
+                        <img src="../assets/img/logo.png" alt="ВЕЛИКАН" class="logo">
+                        <span class="velikan-brand-copy">
+                            <span class="velikan-brand-name">ВЕЛИКАН</span>
+                            <span class="velikan-brand-subtitle">помощь пациентам</span>
+                        </span>
+                    </a>
+            </div>
+            <button class="ul-sidebar-closer"><i class="flaticon-close"></i></button>
+        </div>
+
+        <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+        <div class="ul-sidebar-footer">
+            <span class="ul-sidebar-footer-title">Мы в соцсетях</span>
+            <div class="ul-sidebar-footer-social">
+                <a href="https://vk.com/club44620319" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"><i class="flaticon-facebook"></i></a>
+                <a href="https://rutube.ru/channel/24360766/" target="_blank" rel="noopener noreferrer" aria-label="RUTUBE"><i class="flaticon-youtube"></i></a>
+                <a href="https://t.me/velikanorg" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="flaticon-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- SIDEBAR SECTION END -->
+
+    <!-- SEARCH MODAL SECTION START -->
+    <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+        <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+        <form action="../index.html#" class="ul-search-form">
+            <div class="ul-search-form-right">
+                <input type="search" name="search" id="ul-search" placeholder="Поиск по сайту">
+                <button type="submit"><span class="icon"><i class="flaticon-search"></i></span></button>
+            </div>
+        </form>
+    </div>
+    <!-- SEARCH MODAL SECTION END -->
+
+    <!-- HEADER SECTION START -->
+    <header class="ul-header">
+        <div class="ul-header-bottom to-be-sticky">
+            <div class="ul-header-bottom-wrapper ul-header-container">
+                <div class="logo-container">
+                    <a href="../index.html" class="velikan-brand">
+                        <img src="../assets/img/logo.png" alt="ВЕЛИКАН" class="logo">
+                        <span class="velikan-brand-copy">
+                            <span class="velikan-brand-name">ВЕЛИКАН</span>
+                            <span class="velikan-brand-subtitle">помощь пациентам</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="ul-header-nav-wrapper">
+                    <div class="to-go-to-sidebar-in-mobile">
+                        <nav class="ul-header-nav">
+                            <a href="../index.html">Главная</a>
+
+                            <div class="has-sub-menu">
+                                <a role="button">О нас</a>
+                                <div class="ul-header-submenu">
+                                    <ul>
+                                        <li><a href="../about/index.html">Об организации</a></li>
+                                        <li><a href="../about/reports/index.html">Отчеты о деятельности</a></li>
+                                        <li><a href="../team/index.html">Наша команда</a></li>
+                                        <li><a href="../requisites/index.html">Реквизиты</a></li>
+                                        <li><a href="../about/partners/index.html">Партнеры</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="has-sub-menu">
+                                <a role="button">Ведущие специалисты</a>
+                                <div class="ul-header-submenu">
+                                    <ul>
+                                        <li><a href="../spec/index.html">Все специалисты</a></li>
+                                        <li><a href="../spec-consultation/index.html">Запись на консультацию</a></li>
+                                        <li><a href="../spec-telemedicine/index.html">Телемедицина</a></li>
+                                        <li><a href="../spec-neurosurgeons/index.html">Врачи-нейрохирурги</a></li>
+                                        <li><a href="../spec-endocrinologists/index.html">Врачи-эндокринологи</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <a href="../pariki-posle-himioterapii/index.html">Заявка на парик</a>
+
+                            <div class="has-sub-menu">
+                                <a role="button">Аденомы гипофиза</a>
+                                <div class="ul-header-submenu">
+                                    <ul>
+                                        <li><a href="../adenomy-gipofiza/index.html">О заболевании</a></li>
+                                        <li><a href="../adenomy-gipofiza/articles/index.html">Статьи и исследования</a></li>
+                                        <li><a href="../help/index.html">Получить помощь</a></li>
+                                        <li><a href="../adenomy-gipofiza/acromegaly/index.html">Акромегалия</a></li>
+                                        <li><a href="../adenomy-gipofiza/cushing/index.html">Кушинг</a></li>
+                                        <li><a href="../adenomy-gipofiza/soputstvuyushhie-zabolevaniya/index.html">Сопутствующие заболевания</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <a href="../events/index.html">Школы пациентов</a>
+                            <a href="../blog/index.html">Новости</a>
+                            <a href="../contact/index.html">Контакты</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="ul-header-actions">
+                    <button class="ul-header-search-opener"><i class="flaticon-search"></i></button>
+                    <a href="../help/index.html" class="ul-btn d-sm-inline-flex d-none"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Получить помощь </a>
+                    <button class="ul-header-sidebar-opener d-lg-none d-inline-flex"><i class="flaticon-menu"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <main>
+        <!-- BREADCRUMBS SECTION START -->
+        <section class="ul-breadcrumb ul-news-breadcrumb ul-section-spacing">
+            <div class="ul-container">
+                <h2 class="ul-breadcrumb-title">Уфа. Школа для пациентов</h2>
+                <ul class="ul-breadcrumb-nav">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><span class="separator"><i class="flaticon-right"></i></span></li>
+                    <li><a href="../blog/index.html">Новости</a></li>
+                    <li><span class="separator"><i class="flaticon-right"></i></span></li>
+                    <li>Уфа</li>
+                </ul>
+            </div>
+        </section>
+        <!-- BREADCRUMBS SECTION END -->
+
+        <!-- BLOG DETAILS SECTION START -->
+        <div class="ul-section-spacing">
+            <div class="ul-container">
+                <div class="row ul-bs-row gy-5 flex-column-reverse flex-md-row">
+                    <div class="col-lg-4 col-md-5">
+                        <aside class="ul-inner-sidebar">
+                            <div class="ul-inner-sidebar-widget posts">
+                                <h3 class="ul-inner-sidebar-widget-title">Другие новости</h3>
+                                <div class="ul-inner-sidebar-widget-content">
+                                    <div class="ul-inner-sidebar-posts">
+                                        <div class="ul-inner-sidebar-post">
+                                            <div class="img">
+                                                <img src="../assets/img/velikan-news-putin.png" alt="Прием обращений">
+                                            </div>
+                                            <div class="txt">
+                                                <h4 class="title"><a href="index.html">Прием обращений к программе «Итоги года»</a></h4>
+                                                <span class="date"><span>05 декабря 2025</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="ul-inner-sidebar-post">
+                                            <div class="img">
+                                                <img src="../assets/img/event-samara-2024-square.png" alt="Самара-Тольятти">
+                                            </div>
+                                            <div class="txt">
+                                                <h4 class="title"><a href="../event-details/index.html">Самара-Тольятти. Школа для пациентов</a></h4>
+                                                <span class="date"><span>22 ноября 2024</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="ul-inner-sidebar-post">
+                                            <div class="img">
+                                                <img src="../assets/img/event-chelyabinsk-2024-square.png" alt="Челябинск">
+                                            </div>
+                                            <div class="txt">
+                                                <h4 class="title"><a href="../event-details/index.html">Челябинск. Школа для пациентов</a></h4>
+                                                <span class="date"><span>26 октября 2024</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ul-inner-sidebar-widget categories">
+                                <h3 class="ul-inner-sidebar-widget-title">Разделы</h3>
+                                <div class="ul-inner-sidebar-widget-content">
+                                    <div class="ul-inner-sidebar-categories">
+                                        <a href="../blog/index.html">Новости <span>06</span></a>
+                                        <a href="../events/index.html">Мероприятия <span>06</span></a>
+                                        <a href="../events/index.html">Школы пациентов <span>∞</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="col-lg-8 col-md-7">
+                        <article class="ul-blog ul-blog-inner velikan-single-news">
+                            <div class="ul-blog-img">
+                                <img src="../assets/img/event-ufa-2024.png" alt="29 ноября 2024 года. Уфа. Школа для пациентов">
+                            </div>
+                            <div class="ul-blog-txt">
+                                <div class="ul-event-details-infos">
+                                    <div class="ul-event-details-info">
+                                        <span class="icon"><i class="flaticon-calendar"></i></span>
+                                        <span class="text">09 октября 2024</span>
+                                    </div>
+                                    <div class="ul-event-details-info">
+                                        <span class="icon"><i class="flaticon-account"></i></span>
+                                        <span class="text">ВЕЛИКАН</span>
+                                    </div>
+                                    <div class="ul-event-details-info">
+                                        <span class="icon"><i class="flaticon-price-tag"></i></span>
+                                        <span class="text">Мероприятия</span>
+                                    </div>
+                                </div>
+
+                                <h1 class="ul-blog-title">29 ноября 2024 года. Уфа. Школа для пациентов.</h1>
+                                <p class="ul-blog-excerpt">29 ноября с 14:00 до 18:00 ВЕЛИКАН проводит школу для пациентов в Уфе. Встреча пройдет по адресу: г. Уфа, ул. Достоевского, 132, МЗРБ «Республиканская клиническая больница им. Г.Г. Куватова».</p>
+
+                                <p>Школа пациентов — это возможность получить информацию о ранней диагностике, лечении, контроле заболевания, психоэмоциональном состоянии и осложнениях при акромегалии. На встрече пациенты смогут задать вопросы специалистам и пообщаться с представителями организации.</p>
+
+                                <blockquote>
+                                    Обещаем, что вы с пользой и интересом проведете свое время.
+                                </blockquote>
+
+                                <h3>Что будет на школе</h3>
+                                <ul class="ul-event-details-list">
+                                    <li>Вступительное слово председателя правления МБОО «Великан» Андрусовой Екатерины Александровны.</li>
+                                    <li>Лекция о ранней диагностике, лечении, коррекции тактики терапии и пациентской ответственности.</li>
+                                    <li>Разговор о психоэмоциональном состоянии пациентов и особенностях жизни при патологиях гипофиза.</li>
+                                    <li>Обсуждение сердечно-сосудистых осложнений при акромегалии.</li>
+                                    <li>Блок о ремиссии, выздоровлении и опыте пациентов, давно живущих с заболеванием.</li>
+                                    <li>Свободное общение, вопросы и ответы.</li>
+                                </ul>
+
+                                <h3>Дополнительная поддержка</h3>
+                                <p>Каждый участник школы получит бесплатный сертификат на проведение исследования ИПФР-1 в лаборатории ИНВИТРО. Для пациентов будет организовано бесплатное такси до места проведения мероприятия и обратно, а для тех, кто не сможет присутствовать лично, предусмотрена возможность подключиться к прямой трансляции.</p>
+
+                                <h3>Почему это важно</h3>
+                                <p>После проведения школы пациентов в Новосибирске в 2019 году были выявлены люди на ранних стадиях болезни. Это позволило взять заболевание под контроль, избежать осложнений и снизить риск развития сопутствующих проблем. Именно поэтому школы пациентов остаются важной частью работы ВЕЛИКАНА.</p>
+
+                                <div class="velikan-event-detail-note">
+                                    <h3>Хотите узнать о будущих школах?</h3>
+                                    <p>Напишите в ВЕЛИКАН, если нужна информация о новых мероприятиях, консультациях специалистов или помощи пациентам.</p>
+                                    <div class="velikan-event-detail-actions">
+                                        <a href="../contact/index.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Связаться</a>
+                                        <a href="../event-details/index.html" class="ul-btn ul-btn--2"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Оригинал</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BLOG DETAILS SECTION END -->
+    </main>
+
+    <!-- FOOTER SECTION START -->
+
+    <!-- FOOTER SECTION START -->
+    <footer class="ul-footer">
+        <div class="ul-footer-top">
+            <div class="ul-footer-container">
+                <div class="ul-footer-top-contact-infos">
+                    <div class="ul-footer-top-contact-info">
+                        <div class="ul-footer-top-contact-info-icon">
+                            <div class="ul-footer-top-contact-info-icon-inner">
+                                <i class="flaticon-pin"></i>
+                            </div>
+                        </div>
+                        <div class="ul-footer-top-contact-info-txt">
+                            <span class="ul-footer-top-contact-info-label">Почтовый адрес</span>
+                            <h5 class="ul-footer-top-contact-info-address">Санкт-Петербург, Богатырский пр., 18 к. 3, оф. 310</h5>
+                        </div>
+                    </div>
+
+                    <div class="ul-footer-top-contact-info">
+                        <div class="ul-footer-top-contact-info-icon">
+                            <div class="ul-footer-top-contact-info-icon-inner">
+                                <i class="flaticon-email"></i>
+                            </div>
+                        </div>
+                        <div class="ul-footer-top-contact-info-txt">
+                            <span class="ul-footer-top-contact-info-label">Электронная почта</span>
+                            <h5 class="ul-footer-top-contact-info-address"><a href="mailto:mail@velikan.info">mail@velikan.info</a></h5>
+                        </div>
+                    </div>
+
+                    <div class="ul-footer-top-contact-info">
+                        <div class="ul-footer-top-contact-info-icon">
+                            <div class="ul-footer-top-contact-info-icon-inner">
+                                <i class="flaticon-telephone-call-1"></i>
+                            </div>
+                        </div>
+                        <div class="ul-footer-top-contact-info-txt">
+                            <span class="ul-footer-top-contact-info-label">WhatsApp</span>
+                            <h5 class="ul-footer-top-contact-info-address"><a href="tel:+79117773277">+7 (911) 777-32-77</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ul-footer-middle">
+            <div class="ul-footer-container">
+                <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+                    <div class="ul-footer-about">
+                        <a href="../index.html" class="velikan-brand">
+                            <img src="../assets/img/logo.png" alt="ВЕЛИКАН" class="logo">
+                            <span class="velikan-brand-copy">
+                                <span class="velikan-brand-name">ВЕЛИКАН</span>
+                                <span class="velikan-brand-subtitle">помощь пациентам</span>
+                            </span>
+                        </a>
+                        <p class="ul-footer-about-txt">«ВЕЛИКАН» помогает пациентам с акромегалией, аденомами гипофиза и тяжелыми эндокринными заболеваниями по всей России.</p>
+                        <div class="ul-footer-socials">
+                            <a href="https://vk.com/club44620319" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"><i class="flaticon-facebook"></i></a>
+                            <a href="https://rutube.ru/channel/24360766/" target="_blank" rel="noopener noreferrer" aria-label="RUTUBE"><i class="flaticon-youtube"></i></a>
+                            <a href="https://t.me/velikanorg" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="flaticon-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="ul-footer-widget">
+                        <h3 class="ul-footer-widget-title">Быстрые ссылки</h3>
+                        <div class="ul-footer-widget-links">
+                            <a href="../about/index.html">Об организации</a>
+                            <a href="../help/index.html">Получить помощь</a>
+                            <a href="../adenomy-gipofiza/index.html">Аденомы гипофиза</a>
+                            <a href="../spec/index.html">Ведущие специалисты</a>
+                            <a href="../contact/index.html">Контакты</a>
+                        </div>
+                    </div>
+
+                    <div class="ul-footer-widget ul-footer-recent-posts">
+                        <h3 class="ul-footer-widget-title">Новости</h3>
+                        <div class="ul-blog-sidebar-posts">
+                            <div class="ul-blog-sidebar-post ul-footer-post">
+                                <div class="img">
+                                    <img src="../assets/img/velikan-news-putin.png" alt="Прием обращений к программе Итоги года с Владимиром Путиным">
+                                </div>
+                                <div class="txt">
+                                    <span class="date">
+                                        <span class="icon"><i class="flaticon-calendar"></i></span>
+                                        <span>05 декабря 2025</span>
+                                    </span>
+                                    <h4 class="title"><a href="index.html">Прием обращений к программе «Итоги года с Владимиром Путиным»</a></h4>
+                                </div>
+                            </div>
+
+                            <div class="ul-blog-sidebar-post ul-footer-post">
+                                <div class="img">
+                                    <img src="../assets/img/velikan-news-ufa.png" alt="Уфа. Школа для пациентов">
+                                </div>
+                                <div class="txt">
+                                    <span class="date">
+                                        <span class="icon"><i class="flaticon-calendar"></i></span>
+                                        <span>29 ноября 2024</span>
+                                    </span>
+                                    <h4 class="title"><a href="../event-details/index.html">Уфа. Школа для пациентов</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ul-footer-widget ul-nwsltr-widget">
+                        <h3 class="ul-footer-widget-title">Контакты</h3>
+                        <div class="ul-footer-widget-links ul-footer-contact-links velikan-footer-contacts">
+                            <a href="mailto:mail@velikan.info"><i class="flaticon-mail"></i> mail@velikan.info</a>
+                            <a href="tel:+79117773277"><i class="flaticon-telephone-call"></i> WhatsApp: +7 (911) 777-32-77</a>
+                            <span><i class="flaticon-pin"></i> Фактический адрес: 197348, Санкт-Петербург, Богатырский пр., 18 к. 3, оф. 310</span>
+                            <span><i class="flaticon-location"></i> Юридический адрес: 196084, Санкт-Петербург, наб. Обводного канала, 92</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ul-footer-bottom">
+            <div class="ul-footer-container">
+                <div class="ul-footer-bottom-wrapper">
+                    <p class="copyright-txt">&copy;
+                        <span id="footer-copyright-year"></span> ВЕЛИКАН. Все права защищены
+                    </p>
+                    <div class="ul-footer-bottom-nav"><a href="../privacy-policy/index.html">Политика конфиденциальности</a> <a href="../cookie-policy/index.html">Использование cookie</a> <a href="../contact/index.html">Контакты</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ul-footer-vectors">
+            <img src="../assets/img/footer-vector-img.png" alt="Декор подвала" class="ul-footer-vector-1">
+        </div>
+    </footer>
+    <!-- FOOTER SECTION END -->
+    <!-- FOOTER SECTION END -->
+
+    <!-- libraries JS -->
+    <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/splide/splide.min.js"></script>
+    <script src="../assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="../assets/vendor/animate-wow/wow.min.js"></script>
+    <script src="../assets/vendor/splittype/index.min.js"></script>
+    <script src="../assets/vendor/mixitup/mixitup.min.js"></script>
+    <script src="../assets/vendor/fslightbox/fslightbox.js"></script>
+    <script src="../assets/vendor/flatpickr/flatpickr.js"></script>
+
+    <!-- custom JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/tab.js"></script>
+    <!-- <script src="assets/js/countdown.js"></script> -->
+    <script src="../assets/js/accordion.js"></script>
+    <script src="../assets/js/progressbar.js"></script>
+</body>
+
+</html>

@@ -876,10 +876,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         slidesPerView: 3,
         spaceBetween: 10,
         slideToClickedSlide: true,
-        loop: true,
-        autoplay: true,
+        watchSlidesProgress: true,
+        loop: false,
         speed: 1000,
-        centeredSlides: true
+        centeredSlides: false
     });
 
     const bannerSlider = new Swiper(".ul-banner-2-slider", {
