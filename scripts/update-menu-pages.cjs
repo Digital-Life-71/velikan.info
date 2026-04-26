@@ -121,8 +121,6 @@ function breadcrumb(prefix, page) {
 }
 
 function hero(prefix, page) {
-  const bullets = (page.bullets || []).map((item) => `<li>${esc(item)}</li>`).join('\n                                        ');
-
   return `
         <section class="ul-about ul-section-spacing wow animate__fadeInUp">
             <div class="ul-container">
@@ -147,18 +145,6 @@ function hero(prefix, page) {
                             <span class="ul-section-sub-title ul-section-sub-title--2">${esc(page.subTitle)}</span>
                             <h2 class="ul-section-title">${esc(page.introTitle)}</h2>
                             <p class="ul-section-descr">${esc(page.description)}</p>
-
-                            <div class="ul-about-block">
-                                <div class="block-left">
-                                    <div class="block-heading">
-                                        <div class="icon"><i class="${esc(page.icon || 'flaticon-love')}"></i></div>
-                                        <h3 class="block-title">${esc(page.blockTitle || 'Что важно знать')}</h3>
-                                    </div>
-                                    <ul class="block-list">
-                                        ${bullets}
-                                    </ul>
-                                </div>
-                            </div>
 
                             <div class="ul-banner-btns">
                                 <a href="${href(prefix, page.ctaHref || 'contact/index.html')}" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> ${esc(page.ctaText || 'Связаться с нами')}</a>
@@ -198,24 +184,7 @@ function cardSection(prefix, page) {
 }
 
 function noteSection(page) {
-  if (!page.note) return '';
-
-  return `
-        <section class="ul-section-spacing pt-0">
-            <div class="ul-container">
-                <div class="ul-about-block wow animate__fadeInUp">
-                    <div class="block-left">
-                        <div class="block-heading">
-                            <div class="icon"><i class="flaticon-email"></i></div>
-                            <h3 class="block-title">${esc(page.note.title)}</h3>
-                        </div>
-                        <ul class="block-list">
-                            ${page.note.items.map((item) => `<li>${esc(item)}</li>`).join('\n                            ')}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>`;
+  return '';
 }
 
 function main(prefix, page) {

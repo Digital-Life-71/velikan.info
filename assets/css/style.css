@@ -1796,60 +1796,6 @@ button {
 .ul-about .ul-section-descr {
   margin-bottom: clamp(20px, 1.58vw, 30px);
 }
-.ul-about-block {
-  display: flex;
-  align-items: center;
-  gap: 20px clamp(30px, 2.89vw, 55px);
-  margin-bottom: clamp(25px, 2.36vw, 45px);
-  flex-wrap: wrap;
-}
-.ul-about-block .block-left .icon {
-  width: clamp(40px, 2.63vw, 50px);
-  aspect-ratio: 50/50;
-  background: url(../img/about-block-icon-bg.svg) no-repeat center center/contain;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: clamp(25px, 1.58vw, 30px);
-  color: var(--white);
-}
-.ul-about-block .block-heading {
-  display: flex;
-  align-items: center;
-  gap: clamp(10px, 0.79vw, 15px);
-  margin-bottom: clamp(3px, 0.32vw, 6px);
-}
-.ul-about-block .block-title {
-  font-size: clamp(18px, 1.16vw, 22px);
-  font-weight: 700;
-}
-.ul-about-block .block-list {
-  color: var(--ul-black);
-}
-.ul-about-block .block-list li {
-  display: flex;
-  align-items: center;
-}
-.ul-about-block .block-list li:before {
-  content: "\f106";
-  font-family: flaticon_charitics !important;
-  font-style: normal;
-  font-weight: normal !important;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: var(--ul-primary);
-  margin-right: clamp(7px, 0.53vw, 10px);
-  font-size: clamp(9px, 0.63vw, 12px);
-}
-.ul-about-block .block-right img {
-  width: 100%;
-  max-width: clamp(230px, 17.34vw, 330px);
-  aspect-ratio: 330/73;
-  border-radius: 999px;
-}
 .ul-about-bottom {
   display: flex;
   align-items: center;
@@ -1935,9 +1881,6 @@ button {
   font-weight: 800;
   line-height: 1.25;
 }
-.velikan-about-page .ul-about-block .block-right img {
-  object-fit: cover;
-}
 .velikan-about-page .ul-about-bottom {
   margin-top: clamp(20px, 1.58vw, 30px);
 }
@@ -1983,12 +1926,6 @@ button {
 }
 .velikan-home-about .ul-about-2-stat .number {
   font-size: clamp(34px, 2.52vw, 48px);
-}
-.velikan-home-about .ul-about-block {
-  margin-bottom: clamp(20px, 2vw, 38px);
-}
-.velikan-home-about .ul-about-block .block-right img {
-  object-fit: cover;
 }
 .ul-about-2-bottom {
   flex-wrap: wrap;
