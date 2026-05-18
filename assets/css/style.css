@@ -44,8 +44,7 @@ CSS INDEX
 34. Pricing Page
 
 */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
 :root {
   --black: #000;
   --white: #fff;
@@ -60,9 +59,9 @@ CSS INDEX
   --ul-gray2: #D2D2D1;
   --ul-gray3: #F4F4F4;
   --ul-gradient: linear-gradient(90deg, var(--ul-primary) 0%, var(--ul-secondary) 100%);
-  --font-primary: "Montserrat", sans-serif;
-  --font-quicksand: "Montserrat", sans-serif;
-  --font-caveat: "Caveat", serif;
+  --font-primary: "Roboto", sans-serif;
+  --font-quicksand: "Roboto", sans-serif;
+  --font-caveat: "Roboto", sans-serif;
 }
 
 html {
