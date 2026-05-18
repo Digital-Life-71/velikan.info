@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы | ВЕЛИКАН</title>
+    <meta name="description" content="Отзывы пациентов и участников сообщества ВЕЛИКАН.">
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../assets/icon/flaticon_charitics.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/splide/splide.min.css">
+    <link rel="stylesheet" href="../assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/vendor/slim-select/slimselect.css">
+    <link rel="stylesheet" href="../assets/vendor/animate-wow/animate.min.css">
+    <link rel="stylesheet" href="../assets/vendor/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <div class="ul-sidebar">
+        <div class="ul-sidebar-header">
+            <div class="ul-sidebar-header-logo">
+                <a href="../index.html" class="velikan-brand">
+                    <img src="../assets/img/logo.png" alt="ВЕЛИКАН" class="logo">
+                    <span class="velikan-brand-copy">
+                        <span class="velikan-brand-name">ВЕЛИКАН</span>
+                        <span class="velikan-brand-subtitle">помощь пациентам</span>
+                    </span>
+                </a>
+            </div>
+            <button class="ul-sidebar-closer"><i class="flaticon-close"></i></button>
+        </div>
+        <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+        <div class="ul-sidebar-footer">
+            <span class="ul-sidebar-footer-title">Мы в соцсетях</span>
+            <div class="ul-sidebar-footer-social">
+                <a href="https://vk.com/club44620319" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"><i class="flaticon-facebook"></i></a>
+                <a href="https://rutube.ru/channel/24360766/" target="_blank" rel="noopener noreferrer" aria-label="RUTUBE"><i class="flaticon-youtube"></i></a>
+                <a href="https://t.me/velikanorg" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="flaticon-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+        <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+        <form action="../index.html#" class="ul-search-form">
+            <div class="ul-search-form-right">
+                <input type="search" name="search" id="ul-search" placeholder="Поиск по сайту">
+                <button type="submit"><span class="icon"><i class="flaticon-search"></i></span></button>
+            </div>
+            <div class="velikan-search-results" aria-live="polite"></div>
+        </form>
+    </div>
+
+    <header class="ul-header">
+        <div class="ul-header-bottom to-be-sticky">
+            <div class="ul-header-bottom-wrapper ul-header-container">
+                <div class="logo-container">
+                    <a href="../index.html" class="velikan-brand">
+                        <img src="../assets/img/logo.png" alt="ВЕЛИКАН" class="logo">
+                        <span class="velikan-brand-copy">
+                            <span class="velikan-brand-name">ВЕЛИКАН</span>
+                            <span class="velikan-brand-subtitle">помощь пациентам</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="ul-header-nav-wrapper">
+                    <div class="to-go-to-sidebar-in-mobile">
+                        <nav class="ul-header-nav">
+                            <a href="../index.html">Главная</a>
+
+                            <div class="has-sub-menu">
+                                <a role="button">О нас</a>
+                                <div class="ul-header-submenu">
+                                    <ul>
+                                        <li><a href="../about/index.html">Об организации</a></li>
+                                        <li><a href="../team/index.html">Команда</a></li>
+                                        <li><a href="../reviews/index.html">Отзывы</a></li>
+                                        <li><a href="../about/reports/index.html">Отчеты</a></li>
+                                        <li><a href="../about/partners/index.html">Партнеры</a></li>
+                                        <li><a href="../requisites/index.html">Реквизиты</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="has-sub-menu">
+                                <a role="button">Проекты</a>
+                                <div class="ul-header-submenu">
+                                    <ul>
+                                        <li><a href="../projects/index.html">Все проекты</a></li>
+                                        <li><a href="../pariki-posle-himioterapii/index.html">Добрый парик</a></li>
+                                        <li><a href="../akromegaliya-znaet-vsya-rossiya/index.html">Акромегалия знает вся Россия</a></li>
+                                        <li><a href="../events/index.html">Школы пациентов</a></li>
+                                        <li><a href="../help/index.html">Получить помощь</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="has-sub-menu">
+                                <a role="button">Заболевания</a>
+                                <div class="ul-header-submenu">
+                                    <ul>
+                                        <li><a href="../adenomy-gipofiza/index.html">Аденомы гипофиза</a></li>
+                                        <li><a href="../adenomy-gipofiza/acromegaly/index.html">Акромегалия</a></li>
+                                        <li><a href="../adenomy-gipofiza/cushing/index.html">Кушинг</a></li>
+                                        <li><a href="../adenomy-gipofiza/articles/index.html">Статьи и исследования</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <a href="../blog/index.html">Новости</a>
+                            <a href="../donations/index.html">Пожертвование</a>
+                            <a href="../contact/index.html">Контакты</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="ul-header-actions">
+                    <button class="ul-header-search-opener"><i class="flaticon-search"></i></button>
+                    <a href="../donations/index.html" class="ul-btn d-sm-inline-flex d-none"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Поддержать</a>
+                    <button class="ul-header-sidebar-opener d-lg-none d-inline-flex"><i class="flaticon-menu"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="ul-breadcrumb ul-section-spacing">
+            <div class="ul-container">
+                <h2 class="ul-breadcrumb-title">Отзывы</h2>
+                <ul class="ul-breadcrumb-nav">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><span class="separator"><i class="flaticon-right"></i></span></li>
+                    <li><a href="../about/index.html">О нас</a></li>
+                    <li><span class="separator"><i class="flaticon-right"></i></span></li>
+                    <li>Отзывы</li>
+                </ul>
+            </div>
+        </section>
+        <section class="ul-reviews ul-section-spacing">
+            <div class="ul-container">
+                <div class="ul-section-heading justify-content-between">
+                    <div>
+                        <span class="ul-section-sub-title">Отзывы пациентов</span>
+                        <h2 class="ul-section-title">Что люди пишут о поддержке ВЕЛИКАНА</h2>
+                        <p class="ul-reviews-heading-descr">Отзывы перенесены с публичной гостевой книги velikan.info/about/reviews/.</p>
+                    </div>
+                    <a href="../contact/index.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Оставить отзыв</a>
+                </div>
+                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 ul-bs-row">
+                    
+                    <div class="col">
+                        <div class="ul-review">
+                            <div class="ul-review-rating"><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i></div>
+                            <p class="ul-review-descr">Благодарна Великану за ценную информацию. К сожалению, узнала о &quot;Великане' после операции. Но, в познакомилась с человеком, который настоятельно рекомендовал повторно собирать документы в МСЭ. Группу мне сняли после операции и я лишилась возможности получать октреотид. Спасибо поддержке пациентов из группы и Великану! Спустя 8 лет наконец-то получила группу.</p>
+                            <div class="ul-review-bottom">
+                                <div class="ul-review-reviewer">
+                                    <div class="reviewer-image"><img src="../assets/img/user-1.png" alt="Пациент"></div>
+                                    <div>
+                                        <h4 class="reviewer-name">Пациент ВЕЛИКАНА</h4>
+                                        <span class="reviewer-role">Гостевая книга</span>
+                                    </div>
+                                </div>
+                                <div class="ul-review-icon"><i class="flaticon-quote"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ul-review">
+                            <div class="ul-review-rating"><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i></div>
+                            <p class="ul-review-descr">Спасибо большое &quot;Великану&quot;! такая нужная помощь , как оплата такси до больниц, это очень кстати, благодарю за поддержку за все эти годы в процессе восстановления и на пути к ремиссии ! Благодарю от души !</p>
+                            <div class="ul-review-bottom">
+                                <div class="ul-review-reviewer">
+                                    <div class="reviewer-image"><img src="../assets/img/user-2.png" alt="Пациент"></div>
+                                    <div>
+                                        <h4 class="reviewer-name">Пациент ВЕЛИКАНА</h4>
+                                        <span class="reviewer-role">Гостевая книга</span>
+                                    </div>
+                                </div>
+                                <div class="ul-review-icon"><i class="flaticon-quote"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ul-review">
+                            <div class="ul-review-rating"><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i></div>
+                            <p class="ul-review-descr">Всё не найду времени сказать вам огромное спасибо за проведенную онлайн-школу в Самаре. Это очень полезно, важно, я получила много полезной информации, которой бы никогда не узнала. Все вопросы были раскрыты спикерами, у нас даже не оставалось вопросов совсем. Специалисты, которые были приглашены - умнички. Спасибо, это фантастически добрая и уникальная организация!</p>
+                            <div class="ul-review-bottom">
+                                <div class="ul-review-reviewer">
+                                    <div class="reviewer-image"><img src="../assets/img/user-3.png" alt="Пациент"></div>
+                                    <div>
+                                        <h4 class="reviewer-name">Пациент ВЕЛИКАНА</h4>
+                                        <span class="reviewer-role">Гостевая книга</span>
+                                    </div>
+                                </div>
+                                <div class="ul-review-icon"><i class="flaticon-quote"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ul-review">
+                            <div class="ul-review-rating"><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i></div>
+                            <p class="ul-review-descr">В 2020 году установили диагноз, соматотропинома, акромегалия. Растерянность и полный информационный вакуум. Непонимание и нежелание медиков понять и помочь. Причем это не нарочно, а от незнания. В первый год доктора посоветовали : &quot; не обращать внимания, не торопиться с операциями, начать с луча, чтоб не лезть в нос&quot;. Вот дословно. А потом были самостоятельные поиски информации по заболеванию. И , наверное Бог, привел меня в...</p>
+                            <div class="ul-review-bottom">
+                                <div class="ul-review-reviewer">
+                                    <div class="reviewer-image"><img src="../assets/img/user-1.png" alt="Пациент"></div>
+                                    <div>
+                                        <h4 class="reviewer-name">Пациент ВЕЛИКАНА</h4>
+                                        <span class="reviewer-role">Гостевая книга</span>
+                                    </div>
+                                </div>
+                                <div class="ul-review-icon"><i class="flaticon-quote"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ul-review">
+                            <div class="ul-review-rating"><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i></div>
+                            <p class="ul-review-descr">Столкнулась с диагнозом акромегалия в августе 2023 года. До этого несколько лет поиска причины головных болей, скитания по врачам. ИФР-1 был 841,1. В сентябре 2023 сделали операцию по удалению аденомы. Спасибо за предоставленную информацию!</p>
+                            <div class="ul-review-bottom">
+                                <div class="ul-review-reviewer">
+                                    <div class="reviewer-image"><img src="../assets/img/user-2.png" alt="Пациент"></div>
+                                    <div>
+                                        <h4 class="reviewer-name">Пациент ВЕЛИКАНА</h4>
+                                        <span class="reviewer-role">Гостевая книга</span>
+                                    </div>
+                                </div>
+                                <div class="ul-review-icon"><i class="flaticon-quote"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ul-review">
+                            <div class="ul-review-rating"><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i></div>
+                            <p class="ul-review-descr">Благодарю Екатерину Андрусову и ,, Великан,, за поддержку с 2017 года , у меня была макроаденома гипофиза ,акромегалия с очень высокими гормонами ,ипфр 1340, если б я знала о Великане раньше, диагноз был бы поставлен своевременно, так как врач более 4х лет ни разу не дала сдать элементарные гормоны ипфр и стг, хотя она эндокринолог, а мне тогда становилось все хуже и все признаки изменений были очевидны , поэтому...</p>
+                            <div class="ul-review-bottom">
+                                <div class="ul-review-reviewer">
+                                    <div class="reviewer-image"><img src="../assets/img/user-3.png" alt="Пациент"></div>
+                                    <div>
+                                        <h4 class="reviewer-name">Пациент ВЕЛИКАНА</h4>
+                                        <span class="reviewer-role">Гостевая книга</span>
+                                    </div>
+                                </div>
+                                <div class="ul-review-icon"><i class="flaticon-quote"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ul-review">
+                            <div class="ul-review-rating"><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i></div>
+                            <p class="ul-review-descr">Добрый вечер! Огромное спасибо за конференцию которая прошла сегодня в Санкт-Петербурге. Было очень интересно узнать всё о своём заболевании. Благодарю всех за проделанную работу,поддержку и советы! Желаю удачи, процветания и выздоровления всем пациентам!. Врачам низкий поклон что не оставляете нас одних с нашей проблемой, помогаете и улучшаете качества жизни!</p>
+                            <div class="ul-review-bottom">
+                                <div class="ul-review-reviewer">
+                                    <div class="reviewer-image"><img src="../assets/img/user-1.png" alt="Пациент"></div>
+                                    <div>
+                                        <h4 class="reviewer-name">Пациент ВЕЛИКАНА</h4>
+                                        <span class="reviewer-role">Гостевая книга</span>
+                                    </div>
+                                </div>
+                                <div class="ul-review-icon"><i class="flaticon-quote"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ul-review">
+                            <div class="ul-review-rating"><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i></div>
+                            <p class="ul-review-descr">У меня была гормонально неактивная макроаденома гипофиза. Сообщество &quot;Великан&quot; оказывает мне огромную поддержку! Состою в нем с 2018 года, когда нашли первую аденому. Отрицание, шок, лечение, операция, ремиссия, рецидив, повторная операция... Всё это пройдено успешно, благодаря информации, отзывам, историям, моральной поддержке участников группы. Всегда помогут, подскажут, ответят и в группе ВКонтакте, и в личных сообщениях....</p>
+                            <div class="ul-review-bottom">
+                                <div class="ul-review-reviewer">
+                                    <div class="reviewer-image"><img src="../assets/img/user-2.png" alt="Пациент"></div>
+                                    <div>
+                                        <h4 class="reviewer-name">Пациент ВЕЛИКАНА</h4>
+                                        <span class="reviewer-role">Гостевая книга</span>
+                                    </div>
+                                </div>
+                                <div class="ul-review-icon"><i class="flaticon-quote"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="ul-review">
+                            <div class="ul-review-rating"><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i><i class="flaticon-star"></i></div>
+                            <p class="ul-review-descr">Благодарю Великан и лично Катю за поддержку ! Уже 4 года идем вместе по этому трудному пути. Такая тяжелая болезнь постигла меня в молодом возрасте, но пациентская организация поддерживает советами и практической деятельностью. Спасибо огромное что вы есть ! Долгих лет жизни и не поддаваться унынию!</p>
+                            <div class="ul-review-bottom">
+                                <div class="ul-review-reviewer">
+                                    <div class="reviewer-image"><img src="../assets/img/user-3.png" alt="Пациент"></div>
+                                    <div>
+                                        <h4 class="reviewer-name">Пациент ВЕЛИКАНА</h4>
+                                        <span class="reviewer-role">Гостевая книга</span>
+                                    </div>
+                                </div>
+                                <div class="ul-review-icon"><i class="flaticon-quote"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="ul-footer">
+        <div class="ul-footer-top">
+            <div class="ul-footer-container">
+                <div class="ul-footer-top-contact-infos">
+                    <div class="ul-footer-top-contact-info">
+                        <div class="ul-footer-top-contact-info-icon"><div class="ul-footer-top-contact-info-icon-inner"><i class="flaticon-pin"></i></div></div>
+                        <div class="ul-footer-top-contact-info-txt">
+                            <span class="ul-footer-top-contact-info-label">Адрес</span>
+                            <h5 class="ul-footer-top-contact-info-address">Санкт-Петербург, Богатырский пр., 18 к. 3, оф. 310</h5>
+                        </div>
+                    </div>
+                    <div class="ul-footer-top-contact-info">
+                        <div class="ul-footer-top-contact-info-icon"><div class="ul-footer-top-contact-info-icon-inner"><i class="flaticon-email"></i></div></div>
+                        <div class="ul-footer-top-contact-info-txt">
+                            <span class="ul-footer-top-contact-info-label">Почта</span>
+                            <h5 class="ul-footer-top-contact-info-address"><a href="mailto:mail@velikan.info">mail@velikan.info</a></h5>
+                        </div>
+                    </div>
+                    <div class="ul-footer-top-contact-info">
+                        <div class="ul-footer-top-contact-info-icon"><div class="ul-footer-top-contact-info-icon-inner"><i class="flaticon-telephone-call-1"></i></div></div>
+                        <div class="ul-footer-top-contact-info-txt">
+                            <span class="ul-footer-top-contact-info-label">WhatsApp</span>
+                            <h5 class="ul-footer-top-contact-info-address"><a href="tel:+79117773277">+7 (911) 777-32-77</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ul-footer-middle">
+            <div class="ul-footer-container">
+                <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+                    <div class="ul-footer-about">
+                        <a href="../index.html" class="velikan-brand">
+                            <img src="../assets/img/logo.png" alt="ВЕЛИКАН" class="logo">
+                            <span class="velikan-brand-copy"><span class="velikan-brand-name">ВЕЛИКАН</span><span class="velikan-brand-subtitle">помощь пациентам</span></span>
+                        </a>
+                        <p class="ul-footer-about-txt">МБООППГ «Великан» помогает пациентам с патологиями гипофиза, тяжелыми эндокринными заболеваниями и людям после онкологического лечения.</p>
+                        <div class="ul-footer-socials">
+                            <a href="https://vk.com/club44620319" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"><i class="flaticon-facebook"></i></a>
+                            <a href="https://rutube.ru/channel/24360766/" target="_blank" rel="noopener noreferrer" aria-label="RUTUBE"><i class="flaticon-youtube"></i></a>
+                            <a href="https://t.me/velikanorg" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="flaticon-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="ul-footer-widget">
+                        <h3 class="ul-footer-widget-title">Быстрые ссылки</h3>
+                        <div class="ul-footer-widget-links">
+                            <a href="../about/index.html">Об организации</a>
+                            <a href="../help/index.html">Получить помощь</a>
+                            <a href="../pariki-posle-himioterapii/index.html">Добрый парик</a>
+                            <a href="../akromegaliya-znaet-vsya-rossiya/index.html">Акромегалия знает вся Россия</a>
+                            <a href="../reviews/index.html">Отзывы</a>
+                        </div>
+                    </div>
+                    <div class="ul-footer-widget ul-footer-recent-posts">
+                        <h3 class="ul-footer-widget-title">Новости</h3>
+                        <div class="ul-blog-sidebar-posts">
+                            <div class="ul-blog-sidebar-post ul-footer-post">
+                                <div class="img"><img src="../assets/img/velikan-service-legal.jpg" alt="«Право на право»: почему российские пациенты с редкими болезнями вынуждены доказывать, что они имеют право жить"></div>
+                                <div class="txt">
+                                    <span class="date"><span class="icon"><i class="flaticon-calendar"></i></span><span>2026</span></span>
+                                    <h4 class="title"><a href="../blog/pravo-na-pravo/index.html">«Право на право»: почему российские пациенты с редкими болезнями вынуждены доказывать, что они имеют право жить</a></h4>
+                                </div>
+                            </div>
+                            <div class="ul-blog-sidebar-post ul-footer-post">
+                                <div class="img"><img src="../assets/img/velikan-banner-rights-photo.png" alt="«Акромегалию в Москве не лечат по правилам»: почему столичные пациенты с редкими болезнями вынуждены становиться инвалидами ради лекарств"></div>
+                                <div class="txt">
+                                    <span class="date"><span class="icon"><i class="flaticon-calendar"></i></span><span>2026</span></span>
+                                    <h4 class="title"><a href="../blog/akromegaliya-v-moskve/index.html">«Акромегалию в Москве не лечат по правилам»: почему столичные пациенты с редкими болезнями вынуждены становиться инвалидами ради лекарств</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ul-footer-widget ul-nwsltr-widget">
+                        <h3 class="ul-footer-widget-title">Контакты</h3>
+                        <div class="ul-footer-widget-links ul-footer-contact-links velikan-footer-contacts">
+                            <a href="mailto:mail@velikan.info"><i class="flaticon-mail"></i> mail@velikan.info</a>
+                            <a href="tel:+79117773277"><i class="flaticon-telephone-call"></i> WhatsApp: +7 (911) 777-32-77</a>
+                            <span><i class="flaticon-pin"></i> Богатырский пр., 18 к. 3, оф. 310</span>
+                            <a href="../requisites/index.html"><i class="flaticon-right"></i> Реквизиты для пожертвования</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ul-footer-bottom">
+            <div class="ul-footer-container">
+                <div class="ul-footer-bottom-wrapper">
+                    <p class="copyright-txt">&copy; <span id="footer-copyright-year"></span> ВЕЛИКАН. Все права защищены</p>
+                    <div class="ul-footer-bottom-nav"><a href="../privacy-policy/index.html">Политика конфиденциальности</a> <a href="../cookie-policy/index.html">Использование cookie</a> <a href="../contact/index.html">Контакты</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="ul-footer-vectors">
+            <img src="../assets/img/footer-vector-img.png" alt="Декор подвала" class="ul-footer-vector-1">
+        </div>
+    </footer>
+
+    <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/splide/splide.min.js"></script>
+    <script src="../assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="../assets/vendor/animate-wow/wow.min.js"></script>
+    <script src="../assets/vendor/splittype/index.min.js"></script>
+    <script src="../assets/vendor/mixitup/mixitup.min.js"></script>
+    <script src="../assets/vendor/fslightbox/fslightbox.js"></script>
+    <script src="../assets/vendor/flatpickr/flatpickr.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/tab.js"></script>
+    <script src="../assets/js/accordion.js"></script>
+    <script src="../assets/js/progressbar.js"></script>
+    <script src="../assets/js/donate-form.js"></script>
+    <script src="../assets/js/site-search.js" data-site-root="../"></script>
+</body>
+
+</html>
