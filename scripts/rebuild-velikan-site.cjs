@@ -96,7 +96,8 @@ const newsArticles = [
     title: firstLine(content.legalMedication),
     category: 'Юридические материалы',
     date: '2026',
-    image: 'velikan-service-legal.jpg',
+    image: 'velikan-news-legal-advocacy.jpg',
+    footerImage: 'velikan-news-putin.png',
     text: content.legalMedication,
   },
   {
@@ -104,7 +105,8 @@ const newsArticles = [
     title: firstLine(content.legalMoscow),
     category: 'Лекарственное обеспечение',
     date: '2026',
-    image: 'velikan-banner-rights-photo.png',
+    image: 'velikan-news-medicine-access.jpg',
+    footerImage: 'velikan-banner-rights-photo.png',
     text: content.legalMoscow,
   },
   {
@@ -131,7 +133,7 @@ const diseaseArticles = [
     title: firstLine(content.vitaminD),
     category: 'Акромегалия',
     date: '2026',
-    image: 'velikan-banner-diagnostics-photo.png',
+    image: 'velikan-article-vitamin-d.jpg',
     text: content.vitaminD,
   },
   {
@@ -311,7 +313,7 @@ function footer(prefix) {
   const h = (target) => href(prefix, target);
   const posts = newsArticles.slice(0, 2).map((item) => `
                             <div class="ul-blog-sidebar-post ul-footer-post">
-                                <div class="img"><img src="${h(`assets/img/${item.image}`)}" alt="${esc(item.title)}"></div>
+                                <div class="img"><img src="${h(`assets/img/${item.footerImage || item.image}`)}" alt="${esc(item.title)}"></div>
                                 <div class="txt">
                                     <span class="date"><span class="icon"><i class="flaticon-calendar"></i></span><span>${esc(item.date)}</span></span>
                                     <h4 class="title"><a href="${h(item.path)}">${esc(item.title)}</a></h4>
@@ -748,8 +750,8 @@ ${serviceCards(prefix, [
 ], { heading: 'Наша деятельность', subtitle: 'Поддержка на каждом этапе', noTop: true })}
 
 ${serviceCards(prefix, [
-  { title: 'Добрый парик', text: 'Парики по индивидуальным размерам из натуральных донорских волос для людей после химиотерапии.', image: 'velikan-oncology-support.png', href: 'pariki-posle-himioterapii/index.html' },
-  { title: 'Акромегалия знает вся Россия', text: 'Проект ранней диагностики акромегалии и других патологий гипофиза.', image: 'velikan-banner-diagnostics-photo.png', href: 'akromegaliya-znaet-vsya-rossiya/index.html' },
+  { title: 'Добрый парик', text: 'Парики по индивидуальным размерам из натуральных донорских волос для людей после химиотерапии.', image: 'velikan-project-good-wig.jpg', href: 'pariki-posle-himioterapii/index.html' },
+  { title: 'Акромегалия знает вся Россия', text: 'Проект ранней диагностики акромегалии и других патологий гипофиза.', image: 'velikan-project-diagnostics-route.jpg', href: 'akromegaliya-znaet-vsya-rossiya/index.html' },
   { title: 'Закрытое сообщество', text: 'Группа поддержки, где пациенты и близкие могут обмениваться опытом и не оставаться одни.', image: 'velikan-banner-community-photo.png', href: 'reviews/index.html' },
 ], { heading: 'Ключевые проекты', subtitle: 'Социальные программы', noTop: true })}
 
@@ -851,7 +853,7 @@ const simplePages = [
     cardsSubtitle: 'Системные изменения',
     cards: [
       { title: 'Информирование', text: 'Распространять знания о ранних симптомах акромегалии и патологиях гипофиза.', image: 'velikan-service-info.jpg', href: 'adenomy-gipofiza/acromegaly/index.html' },
-      { title: 'Диагностика по ОМС', text: 'Добиваться включения анализа ИФР-1 в программу ОМС и доступного маршрута обследования.', image: 'velikan-banner-diagnostics-photo.png', href: 'help/index.html' },
+      { title: 'Диагностика по ОМС', text: 'Добиваться включения анализа ИФР-1 в программу ОМС и доступного маршрута обследования.', image: 'velikan-project-diagnostics-route.jpg', href: 'help/index.html' },
       { title: 'Регистр пациентов', text: 'Выявить новых пациентов и сформировать культуру самоконтроля здоровья.', image: 'velikan-service-school.jpg', href: 'contact/index.html' },
     ],
   },
@@ -871,8 +873,8 @@ const simplePages = [
     cardsTitle: 'Основные направления',
     cardsSubtitle: 'Что можно открыть',
     cards: [
-      { title: 'Добрый парик', text: 'Адресная помощь детям, подросткам и взрослым после химиотерапии.', image: 'velikan-oncology-support.png', href: 'pariki-posle-himioterapii/index.html' },
-      { title: 'Акромегалия знает вся Россия', text: 'Система ранней диагностики и информирования о патологиях гипофиза.', image: 'velikan-banner-diagnostics-photo.png', href: 'akromegaliya-znaet-vsya-rossiya/index.html' },
+      { title: 'Добрый парик', text: 'Адресная помощь детям, подросткам и взрослым после химиотерапии.', image: 'velikan-project-good-wig.jpg', href: 'pariki-posle-himioterapii/index.html' },
+      { title: 'Акромегалия знает вся Россия', text: 'Система ранней диагностики и информирования о патологиях гипофиза.', image: 'velikan-project-diagnostics-route.jpg', href: 'akromegaliya-znaet-vsya-rossiya/index.html' },
       { title: 'Школы пациентов', text: 'Бесплатные очные и онлайн-встречи с ведущими врачами и экспертами.', image: 'velikan-service-school.jpg', href: 'events/index.html' },
     ],
   },
