@@ -58,6 +58,13 @@ function href(prefix, target) {
   return `${prefix}${target}`;
 }
 
+const imageCacheVersion = '20260519-photo-duplicates';
+
+function imageHref(prefix, target) {
+  const separator = target.includes('?') ? '&' : '?';
+  return `${href(prefix, target)}${separator}v=${imageCacheVersion}`;
+}
+
 const content = {
   org: row(2),
   oncology: row(3),
@@ -313,7 +320,7 @@ function footer(prefix) {
   const h = (target) => href(prefix, target);
   const posts = newsArticles.slice(0, 2).map((item) => `
                             <div class="ul-blog-sidebar-post ul-footer-post">
-                                <div class="img"><img src="${h(`assets/img/${item.footerImage || item.image}`)}" alt="${esc(item.title)}"></div>
+                                <div class="img"><img src="${imageHref(prefix, `assets/img/${item.footerImage || item.image}`)}" alt="${esc(item.title)}"></div>
                                 <div class="txt">
                                     <span class="date"><span class="icon"><i class="flaticon-calendar"></i></span><span>${esc(item.date)}</span></span>
                                     <h4 class="title"><a href="${h(item.path)}">${esc(item.title)}</a></h4>
@@ -575,7 +582,7 @@ function articleCards(prefix, articles, opts = {}) {
                     ${articles.map((item) => `
                     <div class="col">
                         <div class="ul-blog ul-blog-2">
-                            <div class="ul-blog-img"><a href="${href(prefix, item.path)}"><img src="${href(prefix, `assets/img/${item.image}`)}" alt="${esc(item.title)}"></a></div>
+                            <div class="ul-blog-img"><a href="${href(prefix, item.path)}"><img src="${imageHref(prefix, `assets/img/${item.image}`)}" alt="${esc(item.title)}"></a></div>
                             <div class="ul-blog-txt">
                                 <div class="ul-blog-infos">
                                     <span class="ul-blog-info"><i class="flaticon-calendar"></i> ${esc(item.date || '2026')}</span>
@@ -651,7 +658,7 @@ function articlePage(article, parent) {
                     <div class="col-lg-8 col-md-7">
                         <article class="ul-blog ul-blog-inner velikan-single-news">
                             <div class="ul-blog-img">
-                                <img src="${href(prefix, `assets/img/${article.image}`)}" alt="${esc(article.title)}">
+                                <img src="${imageHref(prefix, `assets/img/${article.image}`)}" alt="${esc(article.title)}">
                             </div>
                             <div class="ul-blog-txt">
                                 <div class="ul-event-details-infos">
