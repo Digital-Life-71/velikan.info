@@ -177,50 +177,118 @@ const team = [
 function nav(prefix) {
   const h = (target) => href(prefix, target);
   return `
-                            <a href="${h('index.html')}">Главная</a>
-
                             <div class="has-sub-menu">
                                 <a role="button">О нас</a>
                                 <div class="ul-header-submenu">
                                     <ul>
                                         <li><a href="${h('about/index.html')}">Об организации</a></li>
-                                        <li><a href="${h('team/index.html')}">Команда</a></li>
+                                        <li><a href="${h('team/index.html')}">Наша команда</a></li>
                                         <li><a href="${h('reviews/index.html')}">Отзывы</a></li>
-                                        <li><a href="${h('about/reports/index.html')}">Отчеты</a></li>
+                                        <li><a href="${h('about/reports/index.html')}">Отчеты о деятельности</a></li>
                                         <li><a href="${h('about/partners/index.html')}">Партнеры</a></li>
                                         <li><a href="${h('requisites/index.html')}">Реквизиты</a></li>
+                                        <li><a href="${h('contact/index.html')}">Контакты</a></li>
+                                        <li><a href="${h('contact/index.html')}">Задать вопрос руководству</a></li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div class="has-sub-menu">
+                            <div class="has-sub-menu has-mega-menu">
                                 <a role="button">Проекты</a>
-                                <div class="ul-header-submenu">
-                                    <ul>
-                                        <li><a href="${h('projects/index.html')}">Все проекты</a></li>
-                                        <li><a href="${h('pariki-posle-himioterapii/index.html')}">Добрый парик</a></li>
-                                        <li><a href="${h('akromegaliya-znaet-vsya-rossiya/index.html')}">Акромегалия знает вся Россия</a></li>
-                                        <li><a href="${h('events/index.html')}">Школы пациентов</a></li>
-                                        <li><a href="${h('help/index.html')}">Получить помощь</a></li>
-                                    </ul>
+                                <div class="ul-header-submenu ul-header-megamenu velikan-megamenu velikan-megamenu--projects">
+                                    <div class="single-col">
+                                        <span class="single-col-title"><a href="${h('akromegaliya-znaet-vsya-rossiya/index.html')}">Акромегалия знает вся Россия</a></span>
+                                        <ul>
+                                            <li><a href="${h('akromegaliya-znaet-vsya-rossiya/index.html')}">Цель и задачи проекта</a></li>
+                                            <li><a href="${h('help/index.html')}">Информационно-правовая поддержка</a></li>
+                                            <li><a href="${h('help/index.html')}">Получение инвалидности</a></li>
+                                            <li><a href="${h('blog/pravo-na-pravo/index.html')}">Лекарственное обеспечение</a></li>
+                                            <li><a href="${h('spec/index.html')}">Консультации специалистов</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="single-col">
+                                        <span class="single-col-title"><a href="${h('liga-velikan/index.html')}">Лига Великан</a></span>
+                                        <ul>
+                                            <li><a href="${h('liga-velikan/index.html')}">Цель и задачи проекта</a></li>
+                                            <li><a href="${h('liga-velikan/index.html')}">Социальное предпринимательство</a></li>
+                                            <li><a href="${h('projects/index.html')}">Все проекты</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="single-col">
+                                        <span class="single-col-title"><a href="${h('oncology/index.html')}">Онкология</a></span>
+                                        <ul>
+                                            <li><a href="${h('pariki-posle-himioterapii/index.html')}">Донорство волос</a></li>
+                                            <li><a href="${h('pariki-posle-himioterapii/index.html')}">Парики по социальным ценам</a></li>
+                                            <li><a href="${h('oncology/psikhologicheskaya-podderzhka/index.html')}">Психологическая поддержка</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="single-col">
+                                        <span class="single-col-title"><a href="${h('medical-tourism/index.html')}">Медицинский туризм</a></span>
+                                        <ul>
+                                            <li><a href="${h('medical-tourism/index.html')}">Цель и задачи проекта</a></li>
+                                            <li><a href="${h('adenomy-gipofiza/index.html')}">Заболевания</a></li>
+                                            <li><a href="${h('help/index.html')}">Виды и формы помощи</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="has-sub-menu has-mega-menu">
+                                <a role="button">Пациентам</a>
+                                <div class="ul-header-submenu ul-header-megamenu velikan-megamenu velikan-megamenu--patients">
+                                    <div class="single-col">
+                                        <span class="single-col-title"><a href="${h('help/index.html')}">Получить помощь</a></span>
+                                        <ul>
+                                            <li><a href="${h('help/index.html')}">Правовая поддержка</a></li>
+                                            <li><a href="${h('help/index.html')}">МСЭ и получение инвалидности</a></li>
+                                            <li><a href="${h('blog/pravo-na-pravo/index.html')}">Лекарственное обеспечение</a></li>
+                                            <li><a href="${h('contact/index.html')}">Заявка на консультацию юриста</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="single-col">
+                                        <span class="single-col-title"><a href="${h('adenomy-gipofiza/index.html')}">Заболевания</a></span>
+                                        <ul>
+                                            <li><a href="${h('adenomy-gipofiza/acromegaly/index.html')}">Акромегалия</a></li>
+                                            <li><a href="${h('adenomy-gipofiza/cushing/index.html')}">Кушинг</a></li>
+                                            <li><a href="${h('adenomy-gipofiza/soputstvuyushhie-zabolevaniya/index.html')}">Сопутствующие заболевания</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="single-col">
+                                        <span class="single-col-title"><a href="${h('spec/index.html')}">Медицинский маршрут</a></span>
+                                        <ul>
+                                            <li><a href="${h('spec-telemedicine/index.html')}">Телемедицина</a></li>
+                                            <li><a href="${h('about/partners/index.html')}">Федеральные медцентры России</a></li>
+                                            <li><a href="${h('help/index.html')}">Реабилитационные центры</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="has-sub-menu">
-                                <a role="button">Заболевания</a>
+                                <a role="button">Знания</a>
                                 <div class="ul-header-submenu">
                                     <ul>
-                                        <li><a href="${h('adenomy-gipofiza/index.html')}">Аденомы гипофиза</a></li>
+                                        <li><a href="${h('adenomy-gipofiza/articles/index.html')}">Статьи</a></li>
+                                        <li><a href="${h('blog/index.html')}">Новости</a></li>
+                                        <li><a href="${h('events/index.html')}">Видео и школы пациентов</a></li>
                                         <li><a href="${h('adenomy-gipofiza/acromegaly/index.html')}">Акромегалия</a></li>
                                         <li><a href="${h('adenomy-gipofiza/cushing/index.html')}">Кушинг</a></li>
-                                        <li><a href="${h('adenomy-gipofiza/articles/index.html')}">Статьи и исследования</a></li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <a href="${h('blog/index.html')}">Новости</a>
-                            <a href="${h('donations/index.html')}">Пожертвование</a>
-                            <a href="${h('contact/index.html')}">Контакты</a>`;
+                            <div class="has-sub-menu">
+                                <a role="button">Специалисты</a>
+                                <div class="ul-header-submenu">
+                                    <ul>
+                                        <li><a href="${h('spec/index.html')}">Все специалисты</a></li>
+                                        <li><a href="${h('spec-consultation/index.html')}">Записаться на консультацию</a></li>
+                                        <li><a href="${h('spec-endocrinologists/index.html')}">Эндокринологи</a></li>
+                                        <li><a href="${h('spec-neurosurgeons/index.html')}">Нейрохирурги</a></li>
+                                        <li><a href="${h('spec-telemedicine/index.html')}">Телемедицина</a></li>
+                                    </ul>
+                                </div>
+                            </div>`;
 }
 
 function head(prefix, title, description) {
@@ -375,10 +443,11 @@ function footer(prefix) {
                         <h3 class="ul-footer-widget-title">Быстрые ссылки</h3>
                         <div class="ul-footer-widget-links">
                             <a href="${h('about/index.html')}">Об организации</a>
-                            <a href="${h('help/index.html')}">Получить помощь</a>
-                            <a href="${h('pariki-posle-himioterapii/index.html')}">Добрый парик</a>
+                            <a href="${h('projects/index.html')}">Проекты</a>
                             <a href="${h('akromegaliya-znaet-vsya-rossiya/index.html')}">Акромегалия знает вся Россия</a>
-                            <a href="${h('reviews/index.html')}">Отзывы</a>
+                            <a href="${h('help/index.html')}">Получить помощь</a>
+                            <a href="${h('adenomy-gipofiza/articles/index.html')}">База знаний</a>
+                            <a href="${h('donations/index.html')}">Поддержать</a>
                         </div>
                     </div>
                     <div class="ul-footer-widget ul-footer-recent-posts">
@@ -844,6 +913,27 @@ const simplePages = [
     ],
   },
   {
+    files: ['oncology/index.html'],
+    title: 'Онкология',
+    docTitle: 'Онкология | ВЕЛИКАН',
+    description: 'Проекты ВЕЛИКАНА для людей после онкологического лечения: донорство волос, Добрый парик и психологическая поддержка.',
+    subtitle: 'Онкология и реабилитация',
+    heading: 'Поддержка людей после онкологического лечения',
+    text: 'Раздел объединяет проекты помощи людям после химиотерапии и радиохирургии: донорство волос, изготовление париков по индивидуальным размерам и бережные материалы о психологической поддержке.',
+    image: 'velikan-oncology-support.png',
+    badgeNumber: 'помощь',
+    badgeText: 'после лечения',
+    ctaHref: 'pariki-posle-himioterapii/index.html',
+    ctaText: 'Проект Добрый парик',
+    cardsTitle: 'Направления онкологической поддержки',
+    cardsSubtitle: 'Что можно открыть',
+    cards: [
+      { title: 'Донорство волос', text: 'Движение для людей, которые хотят передать натуральные волосы на создание париков.', image: 'velikan-home-support-bg.jpg', href: 'pariki-posle-himioterapii/index.html' },
+      { title: 'Парики по индивидуальным размерам', text: 'Адресная помощь детям, подросткам и взрослым после лечения.', image: 'velikan-project-good-wig.jpg', href: 'pariki-posle-himioterapii/index.html' },
+      { title: 'Психологическая поддержка', text: 'Материал о бережной поддержке, устойчивости и качестве жизни во время лечения.', image: 'velikan-oncology-support.png', href: 'oncology/psikhologicheskaya-podderzhka/index.html' },
+    ],
+  },
+  {
     files: ['akromegaliya-znaet-vsya-rossiya/index.html'],
     title: 'Акромегалия знает вся Россия',
     docTitle: 'Акромегалия знает вся Россия | ВЕЛИКАН',
@@ -865,6 +955,48 @@ const simplePages = [
     ],
   },
   {
+    files: ['liga-velikan/index.html'],
+    title: 'Лига Великан',
+    docTitle: 'Лига Великан | ВЕЛИКАН',
+    description: 'Социальное предпринимательство ВЕЛИКАНА: проверенные медицинские изделия и устойчивые программы помощи.',
+    subtitle: 'Социальное предпринимательство',
+    heading: 'Лига Великан объединяет проверенные решения для пациентов',
+    text: 'Направление помогает развивать социальное предпринимательство вокруг пациентских задач: искать понятные, проверенные и полезные медицинские изделия, поддерживать проекты помощи и формировать устойчивую модель поддержки.',
+    image: 'velikan-home-help-bg.jpg',
+    badgeNumber: 'лига',
+    badgeText: 'практичных решений',
+    ctaHref: 'contact/index.html',
+    ctaText: 'Предложить партнерство',
+    cardsTitle: 'Что входит в направление',
+    cardsSubtitle: 'Лига Великан',
+    cards: [
+      { title: 'Цель и задачи проекта', text: 'Поддерживать пациентов через практичные решения, понятные маршруты и надежных партнеров.', image: 'velikan-service-route.jpg', href: 'liga-velikan/index.html' },
+      { title: 'Проверенные медицинские изделия', text: 'Отбирать решения, которые помогают людям в реабилитации и повседневной жизни.', image: 'velikan-service-info.jpg', href: 'contact/index.html' },
+      { title: 'Партнерские программы', text: 'Развивать сотрудничество с экспертами, поставщиками и социальными площадками.', image: 'velikan-specialists-preview.jpg', href: 'about/partners/index.html' },
+    ],
+  },
+  {
+    files: ['medical-tourism/index.html'],
+    title: 'Медицинский туризм',
+    docTitle: 'Медицинский туризм | ВЕЛИКАН',
+    description: 'Медицинская маршрутизация: заболевания, виды помощи, подготовка документов и консультации специалистов.',
+    subtitle: 'Медицинская маршрутизация',
+    heading: 'Помогаем разобраться с маршрутом обследования и лечения',
+    text: 'Раздел нужен для пациентов, которым важно понять, куда обращаться, какие документы подготовить, какие формы помощи существуют и как получить консультацию профильного специалиста.',
+    image: 'velikan-service-route.jpg',
+    badgeNumber: 'маршрут',
+    badgeText: 'к помощи',
+    ctaHref: 'help/index.html',
+    ctaText: 'Получить помощь',
+    cardsTitle: 'Структура направления',
+    cardsSubtitle: 'Медицинский туризм',
+    cards: [
+      { title: 'Цель и задачи проекта', text: 'Сократить путь пациента от вопроса к понятному следующему шагу.', image: 'velikan-project-diagnostics-route.jpg', href: 'medical-tourism/index.html' },
+      { title: 'Заболевания', text: 'Акромегалия, Кушинг и другие состояния, где важна профильная диагностика.', image: 'velikan-banner-experts-photo.png', href: 'adenomy-gipofiza/index.html' },
+      { title: 'Виды и формы помощи', text: 'Консультации, подготовка документов, телемедицина и маршрутизация в медицинские центры.', image: 'velikan-service-consult.jpg', href: 'help/index.html' },
+    ],
+  },
+  {
     files: ['projects/index.html', 'projects.html'],
     title: 'Проекты',
     docTitle: 'Проекты | ВЕЛИКАН',
@@ -880,8 +1012,11 @@ const simplePages = [
     cardsTitle: 'Основные направления',
     cardsSubtitle: 'Что можно открыть',
     cards: [
-      { title: 'Добрый парик', text: 'Адресная помощь детям, подросткам и взрослым после химиотерапии.', image: 'velikan-project-good-wig.jpg', href: 'pariki-posle-himioterapii/index.html' },
       { title: 'Акромегалия знает вся Россия', text: 'Система ранней диагностики и информирования о патологиях гипофиза.', image: 'velikan-project-diagnostics-route.jpg', href: 'akromegaliya-znaet-vsya-rossiya/index.html' },
+      { title: 'Лига Великан', text: 'Социальное предпринимательство и проверенные решения для пациентов.', image: 'velikan-home-help-bg.jpg', href: 'liga-velikan/index.html' },
+      { title: 'Онкология', text: 'Донорство волос, Добрый парик и психологическая поддержка после лечения.', image: 'velikan-oncology-support.png', href: 'oncology/index.html' },
+      { title: 'Медицинский туризм', text: 'Маршрутизация, заболевания, виды и формы помощи.', image: 'velikan-service-route.jpg', href: 'medical-tourism/index.html' },
+      { title: 'Добрый парик', text: 'Адресная помощь детям, подросткам и взрослым после химиотерапии.', image: 'velikan-project-good-wig.jpg', href: 'pariki-posle-himioterapii/index.html' },
       { title: 'Школы пациентов', text: 'Бесплатные очные и онлайн-встречи с ведущими врачами и экспертами.', image: 'velikan-service-school.jpg', href: 'events/index.html' },
     ],
   },
@@ -904,6 +1039,27 @@ const simplePages = [
       { title: 'Акромегалия', text: 'Симптомы, диагностика, лечение и вопросы, которые важно обсудить с врачом.', image: 'velikan-service-consult.jpg', href: 'adenomy-gipofiza/acromegaly/index.html' },
       { title: 'Кушинг', text: 'Что такое синдром и болезнь Кушинга, как работает кортизол и почему нужна профильная диагностика.', image: 'velikan-cushing-adrenal.png', href: 'adenomy-gipofiza/cushing/index.html' },
       { title: 'Статьи и исследования', text: 'Головная боль, витамин D, телемедицина и другие материалы для пациентов.', image: 'velikan-service-info.jpg', href: 'adenomy-gipofiza/articles/index.html' },
+    ],
+  },
+  {
+    files: ['adenomy-gipofiza/soputstvuyushhie-zabolevaniya/index.html'],
+    title: 'Сопутствующие заболевания',
+    docTitle: 'Сопутствующие заболевания | ВЕЛИКАН',
+    description: 'Сопутствующие заболевания при патологиях гипофиза и материалы для пациентов.',
+    subtitle: 'Кушинг и сопутствующие заболевания',
+    heading: 'Сопутствующие состояния требуют внимательного маршрута',
+    text: 'Раздел помогает собрать материалы о состояниях, которые могут сопровождать патологии гипофиза, акромегалию или гиперкортицизм, и направляет пациента к базе знаний и консультациям специалистов.',
+    image: 'velikan-banner-experts-photo.png',
+    badgeNumber: 'знания',
+    badgeText: 'и маршрут',
+    ctaHref: 'help/index.html',
+    ctaText: 'Задать вопрос',
+    cardsTitle: 'Куда перейти дальше',
+    cardsSubtitle: 'Материалы и помощь',
+    cards: [
+      { title: 'Кушинг', text: 'База знаний о синдроме и болезни Кушинга.', image: 'velikan-cushing-adrenal.png', href: 'adenomy-gipofiza/cushing/index.html' },
+      { title: 'Статьи и исследования', text: 'Материалы о качестве жизни, симптомах и диагностике.', image: 'velikan-service-info.jpg', href: 'adenomy-gipofiza/articles/index.html' },
+      { title: 'Консультации специалистов', text: 'Эндокринологи, нейрохирурги и телемедицинские консультации.', image: 'velikan-service-consult.jpg', href: 'spec/index.html' },
     ],
   },
   {
@@ -1286,10 +1442,11 @@ function syncShell() {
       /(<h3 class="ul-footer-widget-title">Быстрые ссылки<\/h3>\s*)<div class="ul-footer-widget-links">[\s\S]*?<\/div>/,
       `$1<div class="ul-footer-widget-links">
                             <a href="${href(prefix, 'about/index.html')}">Об организации</a>
-                            <a href="${href(prefix, 'help/index.html')}">Получить помощь</a>
-                            <a href="${href(prefix, 'pariki-posle-himioterapii/index.html')}">Добрый парик</a>
+                            <a href="${href(prefix, 'projects/index.html')}">Проекты</a>
                             <a href="${href(prefix, 'akromegaliya-znaet-vsya-rossiya/index.html')}">Акромегалия знает вся Россия</a>
-                            <a href="${href(prefix, 'reviews/index.html')}">Отзывы</a>
+                            <a href="${href(prefix, 'help/index.html')}">Получить помощь</a>
+                            <a href="${href(prefix, 'adenomy-gipofiza/articles/index.html')}">База знаний</a>
+                            <a href="${href(prefix, 'donations/index.html')}">Поддержать</a>
                         </div>`
     );
 
