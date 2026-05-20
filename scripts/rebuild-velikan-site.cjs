@@ -58,7 +58,7 @@ function href(prefix, target) {
   return `${prefix}${target}`;
 }
 
-const imageCacheVersion = '20260519-photo-duplicates';
+const imageCacheVersion = '20260520-slavic-photos';
 
 function imageHref(prefix, target) {
   const separator = target.includes('?') ? '&' : '?';
