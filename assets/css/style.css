@@ -1132,7 +1132,7 @@ button {
 }
 .ul-header-nav a {
   font-weight: 600;
-  font-size: clamp(13px, 0.78vw, 15px);
+  font-size: clamp(14px, 0.88vw, 16px);
 }
 .ul-header-nav a, .ul-header-nav a:not([href]):not([class]) {
   color: var(--white);
@@ -5606,7 +5606,7 @@ button {
   }
 
   .ul-header-nav a {
-    font-size: clamp(12px, 0.72vw, 14px);
+    font-size: clamp(14px, 0.84vw, 16px);
   }
 
   .ul-header-megamenu.velikan-megamenu {
@@ -5633,7 +5633,7 @@ button {
   display: block;
   margin-bottom: 10px;
   color: var(--ul-primary);
-  font-size: clamp(14px, 0.86vw, 16px);
+  font-size: clamp(15px, 0.95vw, 17px);
   font-weight: 800;
   line-height: 1.25;
   text-transform: none;
@@ -5656,7 +5656,7 @@ button {
 
 .ul-header-megamenu.velikan-megamenu li a {
   color: var(--ul-black);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   opacity: 0.82;
 }
@@ -5682,7 +5682,7 @@ button {
 
   .ul-header-megamenu.velikan-megamenu .single-col-title {
     margin-bottom: 6px;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .ul-header-megamenu.velikan-megamenu li {
